@@ -1,0 +1,93 @@
+html {
+    height: 100;
+}
+
+body {
+    background-color: rgb(19, 8, 57);
+    background-size: cover;
+    height: calc(100vh -164px);
+    color: white;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+h2 {
+    font-family: 'Sedgwick Ave Display', sans-serif;
+}
+
+.slogan {
+    font-size: 2.5rem;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main.logo-link {
+    width: fit-content;
+}
+
+.start-shopping-btn {
+    background-color: rgb(136, 24, 136);
+    color: white;
+    min-width: 260px;
+    font-family: 'Sedgwick Ave Display', sans-serif ;
+}
+
+.btn-white {
+    background: white;
+    color: black;
+}
+
+.start_shopping-btn:hover,
+.start_shopping-btn:active,
+.start_shopping-btn:focus,
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+    background: #2dc4bc;
+    color: white;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
