@@ -40,7 +40,9 @@ h1 {
     }
 } 
 
-
+.navbar {
+    padding: 0 !important; 
+}
 
 .slogan {
     font-size: 2rem;
@@ -52,6 +54,10 @@ h1 {
 
 .bg-black {
     background-color: black;
+}
+
+.bg-red {
+    background-color: red;
 }
 
 .icon {
