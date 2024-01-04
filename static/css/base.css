@@ -54,7 +54,7 @@ h1 {
 }
 
 .bg-red {
-    background-color: red;
+    background-color: rgb(180, 3, 3);
 }
 
 .icon {
@@ -128,7 +128,7 @@ h1 {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 200px;
     }
 }
 
