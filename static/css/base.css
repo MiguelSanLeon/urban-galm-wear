@@ -38,7 +38,17 @@ h1 {
     100% {
         background-position: 0 0;
     }
-} 
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background:rgb(19, 8, 57);
+    z-index: -1;
+}
 
 .navbar {
     padding: 0 !important; 
@@ -67,7 +77,11 @@ h1 {
 
 .nav-font {
     font-size: clamp(20px, 1.7vw, 30px);
-    
+    margin-bottom: 0;
+}
+
+.nav-link {
+    padding: 0.3rem 0.3rem;
 }
 
 .logo-font {
@@ -106,6 +120,16 @@ h1 {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+.text-box {
+    height: 150px;
+    font-size: .7rem;
 }
 
 /* -------------------------------- Media Queries */
