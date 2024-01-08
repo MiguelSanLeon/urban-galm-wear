@@ -1,5 +1,10 @@
+/* General style */
 html {
-    height: 100;
+    height: 100%;
+}
+
+.header-container {
+    padding-top: 200px;
 }
 
 body {
@@ -16,10 +21,68 @@ h1 {
     font-size: 3.2vw;
 }
 
+.logo-font {
+    text-transform: uppercase;
+}
+
+.slogan {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-red {
+    background-color: rgb(180, 3, 3);
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: white;
+}
+
+.main.logo-link {
+    width: fit-content;
+}
+
+.btn-white {
+    background: white;
+    color: black;
+}
+
+/* Navbar styling */
+
+.navbar {
+    padding: 0 !important;
+}
+
+.nav-font {
+    font-size: clamp(20px, 1.7vw, 30px);
+    margin-bottom: 0;
+}
+
+.nav-link {
+    padding: 0.3rem 0.3rem;
+}
+
+/* Logo styling */
 .logo-effect {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(18, 7, 237);
-    background-image: linear-gradient(45deg, white 25%, black 45%, rgb(18, 4, 225) 50%,black 55%, white 75%);
+    background-image: linear-gradient(65deg, white 25%, black 45%, rgb(18, 4, 225) 50%,black 55%, white 75%);
     background-color: white;
     background-clip: text;
     -webkit-background-clip: text;
@@ -40,6 +103,61 @@ h1 {
     }
 }
 
+/* Shopping button styling from uiverse.io */
+
+.start-shopping-btn {
+    --glow-color: rgb(17, 23, 183);
+    --glow-spread-color: rgba(172, 82, 199, 0.781);
+    --enhanced-glow-color: rgb(16, 131, 232);
+    --btn-color: rgb(0, 0, 0);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-family: 'Sedgwick Ave Display',
+        sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    transition: all 0.6s;
+}
+
+.start-shopping-btn::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: .25em solid var(--btn-color);
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.start-shopping-btn:hover {
+    color: var(--enhanced-glow-color);
+    border: .10em solid var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+.start-shopping-btn:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+/* Product page styling */
+hr {
+    border: 1px solid white;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -47,84 +165,12 @@ h1 {
     left: 0;
     position: fixed;
     background:rgb(19, 8, 57);
-    z-index: -1;
-}
-
-.navbar {
-    padding: 0 !important; 
-}
-
-.slogan {
-    font-size: 2rem;
-    font-weight: bolder;
-}
-
-.bg-black {
-    background-color: black;
-}
-
-.bg-red {
-    background-color: rgb(180, 3, 3);
-}
-
-.icon {
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color:white;
-}
-
-.nav-font {
-    font-size: clamp(20px, 1.7vw, 30px);
-    margin-bottom: 0;
-}
-
-.nav-link {
-    padding: 0.3rem 0.3rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main.logo-link {
-    width: fit-content;
-}
-
-.start-shopping-btn {
-    background-color: rgb(136, 24, 136);
-    color: white;
-    min-width: 260px;
-    font-family: 'Sedgwick Ave Display', sans-serif ;
-}
-
-.btn-white {
-    background: white;
-    color: black;
-}
-
-.start_shopping-btn:hover,
-.start_shopping-btn:active,
-.start_shopping-btn:focus,
-.btn-white:hover,
-.btn-white:active,
-.btn-white:focus {
-    background: #2dc4bc;
-    color: white;
-}
-
-.text-black {
-    color: black !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
+    z-index: -2;
 }
 
 .box img {
     width: 100%;
-    height: auto;
+    height:fit-content;
 }
 
 .text-box {
@@ -139,6 +185,7 @@ h1 {
     .container {
         max-width: 80%;
     }
+
 }
 
 /* fixed top navbar only on medium and up */
@@ -151,8 +198,6 @@ h1 {
         z-index: 1030;
     }
 
-    .header-container {
-        padding-top: 200px;
-    }
 }
+
 
