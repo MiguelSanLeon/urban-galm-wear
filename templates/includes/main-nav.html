@@ -19,10 +19,10 @@
                 Skaters
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="skater-link">
-                <a href="" class="dropdown-item">Hoodies</a>
-                <a href="" class="dropdown-item">Jerseys</a>
-                <a href="" class="dropdown-item">T-Shirts</a>
-                <a href="" class="dropdown-item">All Skater products</a>
+                <a href="{% url 'products' %}?category=sk_hoodies" class="dropdown-item">Hoodies</a>
+                <a href="{% url 'products' %}?category=sk_jerseys" class="dropdown-item">Jerseys</a>
+                <a href="{% url 'products' %}?category=sk_Tshirts" class="dropdown-item">T-Shirts</a>
+                <a href="{% url 'products' %}?category=sk_hoodies,sk_jerseys,sk_Tshirts" class="dropdown-item">All Skater products</a>
             </div>
         </li>
 
@@ -32,10 +32,10 @@
                 Club socialite
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="club-socialite-link">
-                <a href="" class="dropdown-item">Pants &amp; Skirts</a>
-                <a href="" class="dropdown-item">Jerseys &amp; Jackets</a>
-                <a href="" class="dropdown-item">T-Shirts &amp; Tops</a>
-                <a href="" class="dropdown-item">All Club-Socialite products</a>
+                <a href="{% url 'products' %}?category=club_socialite_pants,club_socialite_skirts" class="dropdown-item">Pants &amp; Skirts</a>
+                <a href="{% url 'products' %}?category=club_socialite_jerseys,club_socialite_jackets" class="dropdown-item">Jerseys &amp; Jackets</a>
+                <a href="{% url 'products' %}?category=club_socialite_tshirts,club_socialite_tops" class="dropdown-item">T-Shirts &amp; Tops</a>
+                <a href="{% url 'products' %}?category=club_socialite_pants,club_socialite_skirts,club_socialite_jerseys,club_socialite_jackets,club_socialite_tshirts,club_socialite_tops" class="dropdown-item">All Club-Socialite products</a>
             </div>
         </li>
 
@@ -45,9 +45,10 @@
                 Hip-Hop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="hip-hop-link">
-                <a href="" class="dropdown-item">Hoodies &amp; T-shirts</a>
-                <a href="" class="dropdown-item">Pants</a>
-                <a href="" class="dropdown-item">All Hip-Hop products</a>
+                <a href="{% url 'products' %}?category=hip_hop_hoodies" class="dropdown-item">Hoodies</a>
+                <a href="{% url 'products' %}?category=hip_hop_Tshirts" class="dropdown-item">T-shirts</a>
+                <a href="{% url 'products' %}?category=hip_hop_pants" class="dropdown-item">Pants</a>
+                <a href="{% url 'products' %}?category=hip_hop_hoodies,hip_hop_Tshirts,hip_hop_pants" class="dropdown-item">All Hip-Hop products</a>
             </div>
         </li>
 
@@ -57,10 +58,10 @@
                 Top-Notch
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="top-notch-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Unclassified</a>
-                <a href="" class="dropdown-item">Serious Vibes</a>
-                <a href="" class="dropdown-item">All Top-Notch</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=unclassified" class="dropdown-item">Unclassified</a>
+                <a href="{% url 'products' %}?category=serious_vibes" class="dropdown-item">Serious Vibes</a>
+                <a href="{% url 'products' %}?category=new_arrivals,unclassified,serious_vibes" class="dropdown-item">All Top-Notch</a>
             </div>
         </li>
     </ul>
