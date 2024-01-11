@@ -158,6 +158,10 @@ hr {
     border: 1px solid white;
 }
 
+.para {
+    font-size: 16px !important;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
