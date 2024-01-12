@@ -14,6 +14,8 @@ def all_products(request):
 
     query = request.GET.get('q')
     category_query = request.GET.get('category')
+    sort_by = request.GET.get('sort', 'name')
+    direction = request.GET.get('direction', 'asc')
 
     categories = None
     products = Product.objects.all()
@@ -28,10 +30,18 @@ def all_products(request):
             messages.warning(
                 request, "No products match your search criteria.")
 
+    if sort_by in ['name', 'price', 'rating', 'carbon_footprint']:
+        if direction == 'asc':
+            products = products.order_by(sort_by)
+        else:
+            products = products.order_by(f'-{sort_by}')
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'sort_by': sort_by,
+        'direction': direction,
     }
 
     return render(request, 'products/products.html', context)
