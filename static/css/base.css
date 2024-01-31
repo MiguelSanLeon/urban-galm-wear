@@ -200,6 +200,16 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Bag page styling */
+
+.icon-b {
+    background-color: #13083900;
+}
+
+.btn-blue {
+    color:#007bff;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
