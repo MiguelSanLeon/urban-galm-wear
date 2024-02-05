@@ -113,7 +113,9 @@
                             <div class="d-flex flex-row align-items-center">
                                 <h4 class="mr-1">{{ product.price }}€</h4>
                             </div>
-                            <h6 class="text-success">Free shipping</h6>
+                            {% if product.price > 60 %}
+                                <h6 class="text-success">Free shipping</h6>
+                            {% endif %}
                             <div class="d-flex flex-column mt-4">
                                 <a href="{% url 'product_detail' product.id %}" class="btn btn-primary btn-sm">Details</a>
                                 <button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button>

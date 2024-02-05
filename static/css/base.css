@@ -70,6 +70,15 @@ h1 {
     color: black;
 }
 
+.small-image {
+    max-width: 100px;
+    height: auto;
+}
+
+.translucent {
+    background-color:rgba(0, 0, 0, 0.619)
+}
+
 /* Navbar styling */
 
 .navbar {
