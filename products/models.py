@@ -24,6 +24,7 @@ class Product(models.Model):
                                  on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
+    has_sizes = models.BooleanField(default=True, null=True, blank=True)
     price = models.DecimalField(max_digits=7, decimal_places=2)
     sku = models.CharField(max_length=128, null=True, blank=True)
     carbon_footprint = models.DecimalField(max_digits=6, decimal_places=2,
