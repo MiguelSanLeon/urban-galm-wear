@@ -9,7 +9,7 @@ html {
 
 body {
     background: url('/media/homepage_background.png') no-repeat center center fixed;
-    background-color: rgb(19, 8, 57);
+    background-color: #130839;
     background-size: cover;
     height: calc(100vh - 400px);
     color: white;
@@ -79,6 +79,11 @@ h1 {
 }
 
 /* Navbar styling */
+
+.special-border-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
 
 .navbar {
     padding: 0 !important;

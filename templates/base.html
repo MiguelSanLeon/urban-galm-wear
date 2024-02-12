@@ -38,6 +38,8 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/459e39fd15.js" crossorigin="anonymous"></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
     {% block extrajs %}
     {% endblock %}
@@ -59,7 +61,7 @@
                     <div class="input-group w-100">
                         <input type="text" class="form-control border border-white rounded-3" name="q" placeholder="Search your style">
                         <div class="input-group-append">
-                            <button class="form-control border-white rounded-3" type="submit">
+                            <button class="form-control border-white rounded-3 special-border-left" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
