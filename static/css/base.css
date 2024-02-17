@@ -22,6 +22,10 @@ h1 {
     font-size: 3.2vw;
 }
 
+.small-fonts {
+    font-size: 18px;
+}
+
 .logo-font {
     text-transform: uppercase;
 }
