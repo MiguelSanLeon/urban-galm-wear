@@ -3,8 +3,9 @@
 {% load bag_tools %}
 
 
-{% block extra_css %}
+{% block extracss %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+
 {% endblock %}
 
 {% block page_header %}
@@ -105,9 +106,9 @@
                         <legend class="fieldset-label small text-white px-2 w-auto">Payment</legend>
                         <!-- A stripe card element will go here -->
                         <div class="mb-3 form-control" id="card-element"></div>
-
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
@@ -133,14 +134,15 @@
                </form>
             </div>
         </div>
+        <div id="loading-overlay" class="hidden">
+            <div class="text-light loading-spinner">
+                <span class="icon-b">
+                    <i class="fa-solid fa-spinner fa-spin-pulse fa-xl"></i>
+                </span>
+            </div>
+        </div>
     </div>
-    <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
-            <span class="icon-b">
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
-        </h1>
-    </div>
+
 {% endblock %}
 
 {% block postloadjs %}
