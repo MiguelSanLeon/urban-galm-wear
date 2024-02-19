@@ -1,10 +1,8 @@
 .StripeElement,
 .stripe-style-input {
   	box-sizing: border-box;
-  	height: 40px;
   	padding: 10px 12px;
   	border: 1px solid transparent;
- 	border-radius: 0px;
   	background-color: white;
   	box-shadow: 0 1px 3px 0 #e6ebf1;
   	-webkit-transition: box-shadow 150ms ease;
@@ -35,6 +33,16 @@
 #card-element {
     color:aqua;
     border: 1px solid aqua;
+}
+
+select,
+select option {
+    color:black;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important
 }
 
 #loading-overlay {
