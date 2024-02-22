@@ -102,6 +102,10 @@ h1 {
     padding: 0.3rem 0.3rem;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 /* Logo styling */
 .logo-effect {
     -webkit-text-stroke-width: 1px;
@@ -256,6 +260,22 @@ a.category-badge > span.badge:hover {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top:  1rem;
+    color: #6c757d;
+
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content imput::placeholder {
+    color: #aab7c4;
 }
 
 /* -------------------------------- Media Queries */
