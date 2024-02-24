@@ -190,12 +190,21 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-7 text-right">
-                <a href="{% url 'products' %}?category=new_arrivals,serious_vibes" class="btn btn-outline-primary rounded-0 my-2">
+                {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn btn-outline-primary rounded-0 my-2">
                     <span class="icon-b mr-2">
-                        <i class="fas fa-gifts"></i>
+                        <i class="fas fa-angle-left"></i>
                     </span>
-                    <span class="text-uppercase">Have a look at our new arrivals</span>
+                    <span class="text-uppercase">Back to your Profile</span>
                 </a>
+                {% else %}
+                    <a href="{% url 'products' %}?category=new_arrivals,serious_vibes" class="btn btn-outline-primary rounded-0 my-2">
+                        <span class="icon-b mr-2">
+                            <i class="fas fa-gifts"></i>
+                        </span>
+                        <span class="text-uppercase">Have a look at our new arrivals</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
