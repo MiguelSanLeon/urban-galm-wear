@@ -185,9 +185,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_DELIVERY_THRESHOLD = 60
 STANDARD_DELIVERY_PERCENTAGE = 0.1
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = os.enviro.get('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.enviro.get('STRIPE_SECRET_KEY', '')
-STRIPE_WH_SECRET = os.enviro.get('STRIPE_WH_SECRET', '')
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 
 # Default primary key field type
