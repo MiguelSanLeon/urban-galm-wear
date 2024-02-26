@@ -1,0 +1,1 @@
+web: gunicorn urban_glam_wear.wsgi:application

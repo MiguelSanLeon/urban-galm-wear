@@ -1,0 +1,31 @@
+URBAN GLAM WEAR
+
+Thank you for your order {{ order.full_name }}.
+
+This is a Confirmation email of your order {{ order.order_number }} placed on {{ order. date }}.
+You can check your order details below:
+
+{% for item in order.lineitems.all %}
+Item: {{ item.product.name }},
+Quantity: {{ item.quantity }},
+Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+Price: €{{ item.product.price }}
+{% endfor %}
+
+Order Total: € {{ order.order_total }}
+Delivery: € {{ order.delivery_cost }}
+Grand Total: € {{ order.grand_total }}
+
+Delivery Address: 
+{{ order.street_address1 }},
+{{ order.town_or_city }}, 
+{{ order.country }}
+
+We are currently processing your order and will keep you updated on its status.
+
+If you have any questions or need further assistance, please feel free to contact our customer service team at {{ contact_email }}.
+
+Thank you again for shopping with us. We truly appreciate your business.
+
+Best regards,
+Urban Glam Wear.

@@ -31,3 +31,17 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     #Existing users: just save the profile
     instance.userprofile.save()
+
+    # Check if the user is a superuser
+    if instance.is_superuser:
+        # Assign specific default values for superusers
+        instance.userprofile.default_phone_number = "0000000000"
+        instance.userprofile.default_street_address1 = "main street 1"
+        instance.userprofile.default_street_address2 = "main main"
+        instance.userprofile.default_town_or_city = "Gotham"
+        instance.userprofile.default_county = "Pearl"
+        instance.userprofile.default_postcode = "A63T5T6"
+        instance.userprofile.default_country = "US"
+
+        # Save the profile again to apply the changes
+        instance.userprofile.save()
