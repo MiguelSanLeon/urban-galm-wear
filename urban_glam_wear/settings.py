@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-&vvenxyr!+p++@bemxrj%j4o+ckbr+p&anphnw=qk1#zvpb_v!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '8000-miguelsanle-urbangalmwe-s3mlzyjzbhe.ws-eu108.gitpod.io',]
+ALLOWED_HOSTS = ['localhost', '8000-miguelsanle-urbangalmwe-s3mlzyjzbhe.ws-eu108.gitpod.io','urban-glam-wear-e8c11a4943c2.herokuapp.com']
 
 
 # Application definition
