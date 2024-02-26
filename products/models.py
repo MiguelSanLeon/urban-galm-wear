@@ -18,6 +18,9 @@ class Category (models.Model):
         return self.friendly_name
 
 
+def custom_image_upload_to(instance, filename):
+    return f'media/{filename}'
+
 class Product(models.Model):
     """ This model holds the product data """
     category = models.ForeignKey('Category', null=True, blank=True,
@@ -32,7 +35,7 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2,
                                  null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to=custom_image_upload_to, null=True, blank=True)
 
     def __str__(self):
         return self.name
