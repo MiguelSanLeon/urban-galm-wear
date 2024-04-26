@@ -23,7 +23,7 @@
             <hr class="w-50">
         </div>
     </div>
-    <div class="row">
+    <div class="row bottom-gap">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
@@ -74,7 +74,7 @@
                         {% else %}
                         <div class="col-md-3 mt-1">
                             <a href="{% url 'product_detail' product.id %}">
-                                <img src="/media/noimage.png" alt="{{ product.name }}" class="img-fluid">
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid">
                             </a>
                         </div>
                         {% endif %}
@@ -118,7 +118,13 @@
                             {% endif %}
                             <div class="d-flex flex-column mt-4">
                                 <a href="{% url 'product_detail' product.id %}" class="btn btn-primary btn-sm">Details</a>
-                                <button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button>
+                                {% if user.is_authenticated %}
+                                    {% if product in wishlist %}
+                                        <a class="btn btn-outline-primary mt-2" role="button" aria-disabled="true" href="{% url 'add_to_wishlist' product.id %}">Remove from Wishlist</a>
+                                    {% else %}
+                                        <a class="btn btn-outline-primary mt-2" role="button" aria-disabled="true" href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
+                                    {% endif %}
+                                {% endif %}
                             </div>
                         </div> 
                     </div>
@@ -141,9 +147,7 @@
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0);
     })
-</script>
 
-<script type="text/javascript">
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);

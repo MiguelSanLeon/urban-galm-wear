@@ -23,7 +23,7 @@
                             </a>
                             {% else %}
                             <a href="" class="box">
-                                <img src="/media/noimage.png" alt="{{ product.name }}">
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             </a>
                             {% endif %}
                         </div>
@@ -74,18 +74,33 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-primary btn-sm mt-2">
+                                <div class="col-12 text-center">
+                                    {% if user.is_authenticated %}
+                                        {% if product in wishlist %}
+                                            <a class="btn btn-outline-primary mt-2" role="button" aria-disabled="true" href="{% url 'add_to_wishlist' product.id %}">Remove from Wishlist</a>
+                                        {% else %}
+                                            <a class="btn btn-outline-primary mt-2" role="button" aria-disabled="true" href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
+                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 text-center">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-info btn-sm mt-2">
                                         <span class="icon-b">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
                                     <input type="submit" class="btn btn-outline-primary btn-sm mt-2" value="Add to Bag">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 </div>
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
                         </form>
+                        <div class="col-12">
+                            {% if request.user.is_superuser %}
+                                <a class="mt-2 btn btn-sm btn-outline-info" href="{% url 'edit_product' product.id %}"><small class="p-2" >Edit</small></a>
+                                <button class="mt-2 btn btn-sm btn-outline-danger float-right" onclick="openCustomConfirm('{{ product.id }}', '{{ product.name }}')" data-toggle="modal" data-target="#customConfirmModal">Delete</button>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>    

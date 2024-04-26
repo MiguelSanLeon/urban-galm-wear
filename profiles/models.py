@@ -45,3 +45,4 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
         # Save the profile again to apply the changes
         instance.userprofile.save()
+        

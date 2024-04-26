@@ -53,8 +53,27 @@ h1 {
 }
 
 .bg-red {
-    background-color: rgb(180, 3, 3);
+    background-color: #b40303;
 }
+
+.shadow-edge {
+    filter: drop-shadow(
+        0 0 8px rgba(204, 250, 22, 0.8)
+    )
+}
+
+.shadow-edge-blue {
+    filter: drop-shadow(
+        0 0 10px rgba(38, 6, 244, 0.8)
+    )
+}
+
+.shadow-edge-black {
+    filter: drop-shadow(
+        0 0 12px rgba(0, 0, 0, 1)
+    )
+}
+
 
 .icon {
     display: inline-flex;
@@ -82,11 +101,23 @@ h1 {
     background-color:rgba(0, 0, 0, 0.619)
 }
 
+.custom-icon {
+    font-size: 70px;
+}
+
+.custom-img {
+    width: 170px;
+}
+
 /* Navbar styling */
 
 .special-border-left {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.custom-box {
+    margin-bottom: 200px;
 }
 
 .navbar {
@@ -157,8 +188,6 @@ input[name='q']::placeholder {
     position: absolute;
     top: 120%;
     left: 0;
-    height: 100%;
-    width: 100%;
     border: .25em solid var(--btn-color);
     background-color: var(--glow-spread-color);
     filter: blur(2em);
@@ -278,6 +307,67 @@ a.category-badge > span.badge:hover {
     color: #aab7c4;
 }
 
+/* Product Form */ 
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: yellow;
+    border-color: yellow;
+}
+
+/* Wishlist */
+
+.custom-image-container {
+    max-height: 500px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: -50px;
+}
+
+.carousel-control-next {
+    right: -50px;
+}
+
+/* Footer */
+
+.bg-black-semi {
+    background-color: rgba(0, 0, 0, 0.808);
+}
+
+.bottom-gap {
+    margin-bottom: 110px;
+}
+
+    
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -285,6 +375,7 @@ a.category-badge > span.badge:hover {
     .container {
         max-width: 80%;
     }
+
     .start-shopping-btn {
         padding: .8rem 2.4rem;
     }
