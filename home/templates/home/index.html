@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {% load static %}
 
@@ -10,17 +11,56 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-10 my-auto">
-                <h2 class="slogan mix-blend">
-                    <strong>Enjoy your Style</strong>
+    <div class="container h-100 custom-box">
+        <div class="row">
+            <div class="col-10 my-auto pt-4">
+                <h2 class="slogan mix-blend pt-4">
+                    <strong class="shadow-edge-black">Enjoy your Style</strong>
                 </h2>
                 <br>
                 <div class="my-3">
                     <a href="{% url 'products' %}">
                         <button class="start-shopping-btn">Go Shopping!</button>
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="translucent" >
+        <div class="mt-5 py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-4 offset-sm-1 translucent rounded-pill">
+                        <figure class="itemside">
+                            <div class="aside text-center">
+                                <span class="custom-icon">
+                                    <i class="fa-solid fa-truck"></i>
+                                </span>
+                            </div>
+                            <figcaption class="info text-center">
+                                <p class="title fs-5 mb-2 fw-bold">Fast Delivery</p>
+                                <p class="text-warning">World Wide Shipping!</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-sm-4 offset-sm-2 translucent rounded-pill">
+                        <figure class="itemside">
+                            <div class="aside text-center">
+                                <span class="custom-icon">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                </span>
+                            </div>
+                            <figcaption class="info text-center">
+                                <p class="title fs-5 mb-2 fw-bold">Secure Payment</p>
+                                <p class="text-warning">Payment system by Stripe.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center pt-2 my-4">
+                        {% include 'newsletter/subscribe.html' with form=form %}
+                    </div>
                 </div>
             </div>
         </div>
