@@ -1,8 +1,16 @@
 from django.contrib import admin
 from .models import Product, Category
+from django import forms
+
+
+class ProductAdminForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        exclude = ['user_wishlist']
 
 
 class ProductAdmin(admin.ModelAdmin):
+    form = ProductAdminForm
     list_display = (
         'sku',
         'name',
@@ -13,7 +21,7 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
 
-    ordering = ('name',) 
+    ordering = ('name',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
