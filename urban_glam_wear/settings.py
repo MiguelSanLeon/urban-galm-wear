@@ -197,7 +197,7 @@ if 'USE_AWS' in os.environ:
     }
 
     # bucket config
-    AWS_STORAGE_BUCKET_NAME = 'urban-glam-wear'
+    AWS_STORAGE_BUCKET_NAME = 'urbanglam'
     AWS_S3_REGION_NAME = 'eu-west-1'
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
@@ -206,7 +206,7 @@ if 'USE_AWS' in os.environ:
     # Static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
-    DEFAULT_FILES_STORAGE = 'custom_storages.MediaStorage'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
 
     # Override static and media Urls in production
