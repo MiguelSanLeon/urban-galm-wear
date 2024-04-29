@@ -29,3 +29,5 @@ urlpatterns = [
     path('wishlist/', include('wishlist.urls')),
     path('newsletter/', include('newsletter.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'urban_glam_wear.views.handler404'
