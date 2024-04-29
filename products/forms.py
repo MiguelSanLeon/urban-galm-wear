@@ -9,7 +9,9 @@ class ProductForm(forms.ModelForm):
         model = Product
         exclude = ['user_wishlist']
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image',
+                             required=False,
+                             widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,4 +21,3 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_name
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-1'
-            

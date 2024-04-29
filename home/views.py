@@ -30,7 +30,8 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request,'Thank You. Your Message Was Successfully Sent!')
+            messages.success(request, 'Thank You. Your Message'
+                             'Was Successfully Sent!')
             return redirect('home')
     context = {
         'form': form
@@ -39,13 +40,13 @@ def contact(request):
 
     contact_form = ContactForm(data=request.POST)
     if contact_form.is_valid():
-            contact_form.instance.email = request.user.email
-            contact_form.instance.name = request.user.username
-            contact = contact_form.save(commit=False)
-            contact.article = article
-            contact.save()
+        contact_form.instance.email = request.user.email
+        contact_form.instance.name = request.user.username
+        contact = contact_form.save(commit=False)
+        contact.message = message
+        contact.save()
     else:
-            contact_form = ContactForm()
+        contact_form = ContactForm()
 
     return render(
             {

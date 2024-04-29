@@ -3,7 +3,6 @@ from .models import Product, Category
 from django.contrib import messages
 from django.db.models.functions import Lower
 from django.db.models import Q
-from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.decorators import login_required
 
