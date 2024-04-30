@@ -170,16 +170,6 @@ def checkout_success(request, order_number):
         user_profile_form = UserProfileForm(profile_data, instance=profile)
         if user_profile_form.is_valid():
             user_profile_form.save()
-    
-    # Send confirmation email 
-    subject = f'Order Confirmation - Order No: {order_number}'
-    message = render_to_string('checkout/confirmation_emails/confirmation_email_body.txt', {'order': order})
-    plain_message = strip_tags(message)
-    from_email = settings.DEFAULT_FROM_EMAIL
-    to_email = order.email
-
-    send_mail(subject, plain_message, from_email, [to_email], html_message=message)
-
 
     messages.success(request, f'Order succesfully processed! \
         Your order number is {order_number} A confirmation  \
