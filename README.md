@@ -1,39 +1,112 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# URBAN GLAM WEAR
 
-Welcome,
+![URBAN-GLAM-WEAR mock up images](documentation_assets/mock-up.png)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Urban Glam Wear is an online clothes shopping site designed for urban fashionist and created using Django, Python, HTML, CSS JavaScript, Amazon Web Services and Stripe.
 
-## Codeanywhere Reminders
+## Table of Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- [URBAN GLAM WEAR](#urban-glam-wear)
+    - [Introduction](#introduction)
+    - [Table of Contents](#table-of-contents)
+    - [User Experience (UX)](#user-experience-ux)
+        - [Project Goals](#project-goals)
+        - [User Stories](#user-stories)
+        - [Strategy Table](#strategy-table)
+    - [Scope](#scope)
+        - [Phase 1](#phase-1)
+        - [Phase 2](#phase-2)
+        - [Phase 3](#phase-3)
+        - [Phase 4](#phase-4)
+    - [Structure](#structure)
+        - [Database Model](#database-model)
+        - [Colour Scheme](#colour-scheme)
+        - [Typography](#typography)
+        - [Wireframes](#wireframes)
+    - [Features](#features)
+        - [General](#general)
+        - [Home Page](#home-page)
+        - [Register Page](#register-page)
+        - [My Profile Page](#my-profile-page)
+        - [Login & Logout Pages](#login--logout-pages)
+        - [Wishlist Page](#wishlist-page)
+        - [Product Management](#product-management)
+        - [Products Page](#products-page)
+        - [Product Detail Page](#product-detail-page)
+        - [Bag Page](#bag-page)
+        - [Checkout Page](#checkout-page)
+        - [Contact Us Page](#contact-us-page)
+        - [About Us Page](#about-us-page)
+        - [Privacy Policy Page](#privacy-policy-page)
+        - [404 Page](#404-page)
+    - [Technologies Used](#technologies-used)
+        - [Languages Used](#languages-used)
+        - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+        - [Packages / Dependencies Installed](#packages--dependencies-installed)
+    - [Testing](#testing)
+        - [Code Validation](#code-validation)
+            - [HTML](#html)
+            - [CSS](#css)
+            - [Python](#python)
+        - [Accesibility](#accesibility)
+        - [Tools Testing](#tools-testing)
+        - [Manual Testing](#manual-testing)
+            - [Browser Compatibility](#browser-compatibility)
+            - [Device Compatibility](#device-compatibility)
+            - [Navbar Testing](#navbar-testing)
+            - [Footer Testing](#footer-testing)
+            - [Search Bar Testing](#search-bar-testing)
+            - [Product Page Testing](#product-page-testing)
+            - [Product Detail Page Testing](#product-detail-page-testing)
+            - [Bag Testing](#bag-testing)
+            - [Checkout Page Testing](#checkout-page-testing)
+            - [Contact Us Page Testing](#contact-us-page-testing)
+            - [Privacy Policy Page Testing](#privacy-policy-page-testing)
+            - [404 Page Testing](#404-page-testing)
+            - [Register Page Testing](#register-page-testing)
+            - [Login Page Testing](#login-page-testing)
+            - [Logout Page Testing](#logout-page-testing)
+            - [Product Management Page Testing](#product-management-page-testing)
+            - [Wishlist Page Testing](#wishlist-page-testing)
+    - [Deployment](#deployment)
+        - [Deploying on Heroku](#deploying-on-heroku)
+    - [Credits](#credits)
+        - [Content](#content)
+        - [Media](#media)
+        - [Code](#code)
+    - [Known Bugs](#known-bugs)
+    - [Acknowledgements](#acknowledgements)
 
-`python3 -m http.server`
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## User Experience (UX)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+Not all Customers enjoy a day of shopping in a crowded mall. Other customers do not have the time or means to go shopping in a physical store. Many customers enjoy searching for their favorite clothes online without having to leave their home. This Website is for all of them.
 
-`http_server`
+### Project Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Responsive design to make the website accessible on different screen sizes.
+- Well-structured website and easy to navigate.
+- Provide security in access to user data and their bookings.
+- Provide a search bar and a navbar to allow the users to look for products by categories.
+- Allows CRUD functionality in bag page and product management page.
+- Provide users with a secure checkout system.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### User Stories
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+- USER STORIE 1: As a shopper, I can browse a list of available products so that I can explore the offerings and find items of interest.
+- USER STORIE 2: As a shopper, I can apply filters to products by category, price, and features so that I can narrow down my search and find products that meet my preferences.
+- USER STORIE 3: As a shopper, I can view detailed product information, including images and descriptions, so that I can make informed decisions about my purchases.
+- USER STORIE 4: As a shopper, I can add products to my shopping cart so that I can keep track of items I intend to purchase.
+- USER STORIE 5: As a shopper, I can view and edit the contents of my shopping cart so that I can make adjustments before finalizing my purchase.
+- USER STORIE 6: As a shopper, I want to receive a confirmation email after making a purchase so that I have a record of my transaction.
+- USER STORIE 7: As a registered user, I can create an account so that I can track my order history.
+- USER STORIE 8: As a registered user I can edit my shipping/billing information and my contact information so that update my information in my profile.
+- USER STORIE 9: As a shopper, I can review my order summary during the checkout process so that I can confirm the accuracy of my selected items and their quantities.
+- USER STORIE 10: As an administrator, I can manage the product catalog by adding, editing, or removing products so that the website reflects the current inventory.
+- USER STORIE 11: As an administrator, I can receive email notifications about new orders so that I can stay informed about incoming business.
+- USER STORIE 12: As a User I can Enter my payment information so that Check out easily and with no problems.
+- USER STORIE 13: As a User I can add products to my wish list so that I can save my favorite items for a future purchase.
+- USER STORIE 14: As a User I can receive a newsletter so that I can be updated about all the discounts and arrivals.
+- USER STORIE 15: As a User I can use a contact form so that I can make questions about products, discounts and other topics of my interest.
