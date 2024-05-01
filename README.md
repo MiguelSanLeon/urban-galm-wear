@@ -24,7 +24,6 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [Database Model](#database-model)
         - [Colour Scheme](#colour-scheme)
         - [Typography](#typography)
-        - [Wireframes](#wireframes)
     - [Features](#features)
         - [General](#general)
         - [Home Page](#home-page)
@@ -110,3 +109,55 @@ Not all Customers enjoy a day of shopping in a crowded mall. Other customers do 
 - USER STORIE 13: As a User I can add products to my wish list so that I can save my favorite items for a future purchase.
 - USER STORIE 14: As a User I can receive a newsletter so that I can be updated about all the discounts and arrivals.
 - USER STORIE 15: As a User I can use a contact form so that I can make questions about products, discounts and other topics of my interest.
+
+### Strategy Table
+
+Opportunity/Problem/Feature| Importance| Viability/Feasibility
+------------ | -------------------------|---------
+Responsive design | 5 | 5
+Display Products in a list | 5 | 5
+Account registration | 5 | 5
+User profile | 5 | 5
+Admin Product Management | 5 | 5
+Add products to bag | 5 | 5
+Remove products from bag | 5 | 5
+Update products in the bag | 5 | 5
+Provides a checkout page | 5 | 5 
+Contact form | 3 | 4
+wishlist | 3 | 4 
+Newsletter Subscription | 3 | 3
+Avoid double checkout | 5 | 4
+checkout email | 3 | 3
+Total | 62 | 63
+
+## Scope
+
+### Phase 1
+- Responsive design
+- Display products in a list
+- Add products to bag
+- Remove products from bag
+- Update products in bag
+### Phase 2
+- Account registration
+- User profile
+- Admin product management
+- Provides a checkout page
+### Phase 3
+- Avoid double checkout
+- Checkout email
+### Phase 4
+- Wishlist
+- Newsletter subscription
+- Contact form
+## Structure
+### Database Model
+![Db-model](documentation_assets/ugw_diagram.png)
+### Colour Scheme
+![Palette](documentation_assets/palette.png)
+### Typography
+The Website has been created with 2 fonts. The main one is Playfair display.
+For Titles and Branding the choosen font is Sedgwick Ave Display.
+![Playfair-Display](documentation_assets/playfair_display.png)
+![Sedgwick-Ave-Display](documentation_assets/sedgwick_ave_display.png)
+
