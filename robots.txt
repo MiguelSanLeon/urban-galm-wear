@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://urban-glam-wear-e8c11a4943c2.herokuapp.com/sitemap.xml
