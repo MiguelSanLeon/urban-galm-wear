@@ -10,6 +10,7 @@ from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from .models import OrderLineItem, Order
 from bag.contexts import bag_contents
+from .utils import send_confirmation_email
 
 import stripe
 import json
