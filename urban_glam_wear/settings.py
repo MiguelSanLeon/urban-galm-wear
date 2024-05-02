@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '8000-miguelsanle-urbangalmwe-164zg1zisnn.ws-eu110.gitpod.io','urban-glam-wear-e8c11a4943c2.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '8000-miguelsanle-urbangalmwe-164zg1zisnn.ws-eu112.gitpod.io','urban-glam-wear-e8c11a4943c2.herokuapp.com']
 
 
 # Application definition
