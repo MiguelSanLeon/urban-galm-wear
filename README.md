@@ -24,6 +24,7 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [Database Model](#database-model)
         - [Colour Scheme](#colour-scheme)
         - [Typography](#typography)
+        - [Wireframes](#wireframes)
     - [Features](#features)
         - [General](#general)
         - [Home Page](#home-page)
@@ -160,4 +161,6 @@ The Website has been created with 2 fonts. The main one is Playfair display.
 For Titles and Branding the choosen font is Sedgwick Ave Display.
 ![Playfair-Display](documentation_assets/playfair_display.png)
 ![Sedgwick-Ave-Display](documentation_assets/sedgwick_ave_display.png)
+### Wireframes
+The wireframes were created using balsamiq.
 
