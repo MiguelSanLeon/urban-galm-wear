@@ -2,7 +2,7 @@ URBAN GLAM WEAR
 
 Thank you for your order {{ order.full_name }}.
 
-This is a Confirmation email of your order {{ order.order_number }} placed on {{ order. date }}.
+This is a Confirmation email of your order {{ order.order_number }} placed on {{ order.date }}.
 You can check your order details below:
 
 {% for item in order.lineitems.all %}
