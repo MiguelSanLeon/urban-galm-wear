@@ -13,7 +13,7 @@ def send_confirmation_email(order):
     ).strip()
 
     # HTML version of the email body
-    html_body = render_to_string(
+    body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.html',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
     )
