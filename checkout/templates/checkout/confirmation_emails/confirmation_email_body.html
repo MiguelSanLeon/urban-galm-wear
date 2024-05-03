@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmation - Urban Glam Wear</title>
+</head>
+<body>
+  <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+    <h2>Order Confirmation</h2>
+    <p>Dear {{ order.full_name }},</p>
+    <p>Thank you for your order with Urban Glam Wear.</p>
+    <p>This email is to confirm that we have received your order <strong>{{ order.order_number }}</strong> placed on <strong>{{ order.date }}</strong>.</p>
+    <p>You can review your order details below:</p>
+    <ul>
+      {% for item in order.lineitems.all %}
+      <li>
+        <strong>Item:</strong> {{ item.product.name }}<br>
+        <strong>Quantity:</strong> {{ item.quantity }}<br>
+        <strong>Size:</strong> {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}<br>
+        <strong>Price:</strong> €{{ item.product.price }}
+      </li>
+      {% endfor %}
+    </ul>
+    <p><strong>Order Total:</strong> €{{ order.order_total }}</p>
+    <p><strong>Delivery:</strong> €{{ order.delivery_cost }}</p>
+    <p><strong>Grand Total:</strong> €{{ order.grand_total }}</p>
+    <h3>Delivery Address:</h3>
+    <p>{{ order.street_address1 }},<br>
+      {{ order.town_or_city }},<br>
+      {{ order.country }}</p>
+    <p>We are currently processing your order and will keep you updated on its status.</p>
+    <p>If you have any questions or need further assistance, please feel free to contact our customer service team at <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.</p>
+    <p>Thank you again for shopping with us. We truly appreciate your business.</p>
+    <p>Best regards,<br>Urban Glam Wear</p>
+  </div>
+</body>
+</html>
