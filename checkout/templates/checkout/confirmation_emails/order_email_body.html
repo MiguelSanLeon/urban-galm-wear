@@ -23,7 +23,7 @@
       <li>
         <strong>Item:</strong> {{ item.product.name }}<br>
         <strong>Quantity:</strong> {{ item.quantity }}<br>
-        <strong>Size:</strong> {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}<br>
+        <strong>Size:</strong> {% if item.product.has_sizes %}{{ item.product_size|upper }}{% else %}N/A{% endif %}<br>
         <strong>Price:</strong> €{{ item.product.price }}
       </li>
       {% endfor %}
