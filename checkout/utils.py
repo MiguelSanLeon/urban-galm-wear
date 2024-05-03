@@ -1,5 +1,5 @@
 from django.template.loader import render_to_string
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.conf import settings
 from django.utils.html import strip_tags
 
@@ -22,20 +22,21 @@ def send_confirmation_email(order):
 
     
     # Send the email to the customer
-    send_mail(
+    email_to_customer = EmailMessage(
         subject,
-        strip_tags(body),
+        body,
         settings.DEFAULT_FROM_EMAIL,
         [order.email],
-        html_message=body,
     )
+    email_to_customer.content_subtype = "html"  # Ensure HTML content is rendered correctly
+    email_to_customer.send()
 
-     # Send a copy of the email to the desired email address using BCC
-    send_mail(
+    # Send a copy of the email to the desired email address using BCC
+    email_copy = EmailMessage(
         subject,
-        strip_tags(body),
+        body,
         settings.DEFAULT_FROM_EMAIL,
-        [],
-        html_message=body,
-        bcc=[order_email_address],
+        [order_email_address],
     )
+    email_copy.content_subtype = "html"  # Ensure HTML content is rendered correctly
+    email_copy.send()
