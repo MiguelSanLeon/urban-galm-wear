@@ -18,13 +18,24 @@ def send_confirmation_email(order):
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
     )
 
-    # Plain text version of the email body
-    plain_text_body = strip_tags(html_body)
+    order_email_address = 'ugworders@gmail.com'
 
+    
+    # Send the email to the customer
     send_mail(
         subject,
-        plain_text_body,
+        strip_tags(body),
         settings.DEFAULT_FROM_EMAIL,
         [order.email],
-        html_message=html_body,
+        html_message=body,
+    )
+
+     # Send a copy of the email to the desired email address using BCC
+    send_mail(
+        subject,
+        strip_tags(body),
+        settings.DEFAULT_FROM_EMAIL,
+        [],
+        html_message=body,
+        bcc=[order_email_address],
     )
