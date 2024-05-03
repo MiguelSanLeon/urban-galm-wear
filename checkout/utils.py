@@ -18,6 +18,11 @@ def send_confirmation_email(order):
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
     )
 
+    body_order = render_to_string(
+        'checkout/confirmation_emails/order_email_body.html',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
+    )
+
     order_email_address = 'ugworders@gmail.com'
 
     
@@ -31,12 +36,12 @@ def send_confirmation_email(order):
     email_to_customer.content_subtype = "html"  # Ensure HTML content is rendered correctly
     email_to_customer.send()
 
-    # Send a copy of the email to the desired email address using BCC
+    # Send a copy of the email to UGW orders dep.
     email_copy = EmailMessage(
         subject,
-        body,
+        body_order,
         settings.DEFAULT_FROM_EMAIL,
-        [order_email_address],
+        [order_email_address], # Email address of orders dep. in UGW
     )
     email_copy.content_subtype = "html"  # Ensure HTML content is rendered correctly
     email_copy.send()
