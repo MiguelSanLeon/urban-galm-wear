@@ -31,5 +31,10 @@ go back to [README.md](/README.md)
 
 |Page|Validator|Result|
 | --- | --- | --- |
-| Home Page | ![home](documentation_assets/testing/home.png) | <mark>Pass<mark>
-|Register Page | ![register](documentation_assets/testing/register.png) | <mark>Pass<mark>
+| Home Page | ![home](documentation_assets/testing/home.png) | <mark>Pass<mark> |
+| Register Page | ![register](documentation_assets/testing/register.png) | <mark>Pass<mark> |
+| My Profile Page | ![my-profile](documentation_assets/testing/my-profile.png) | <mark>Pass<mark> |
+| Login Page | ![login](documentation_assets/testing/login.png) | <mark>Pass<mark> |
+| Logout Page | ![logout](documentation_assets/testing/logout.png) | <mark>Pass<mark> |
+| Wishlist Page | ![wishlist](documentation_assets/testing/wishlist.png) | <mark>Pass<mark> |
+
