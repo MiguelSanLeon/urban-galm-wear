@@ -11,15 +11,44 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="col-md-4 col-lg-4 mx-auto mb-4 text-sm-center">
-    <h1 class="logo-font my-4">Contact:</h1>
-    <hr class="w-50" >
-    <p class="mb-0"><i class="fas fa-home me-3 text-white mx-2"></i>
-        7b Rainbow Avenue 
-        <br>
-        Dublin, Ireland
-    </p>
-    <p class="mb-0"><i class="fas fa-phone me-3 text-white mx-2"></i>Phone: 007 887 987</p>
-    <p><i class="fas fa-envelope me-3 text-white mx-2"></i>Email: urbanglamwear@urb.com</p>
+<div class="row justify-content-center align-items-center">
+    <div class="col-12 text-center">
+        <h1>About Us</h1>
+        <hr class="w-50" >
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5">
+                <img src="{{ MEDIA_URL }}shop_interior.png" alt="Shop interior" class="img-fluid">
+            </div>
+            <div class="col-lg-5">
+                <p>
+                    <small>
+                    Step into our vibrant and stylish urban clothing store, where you're greeted
+                    by the glow of bold neon lights that illuminate the space. Our store is a haven
+                    for fashion-forward individuals, showcasing the latest in skater and hip-hop 
+                    wear. The interior is adorned with captivating graffiti-style murals that infuse
+                    the space with urban energy. As you explore, you'll encounter mannequins elegantly
+                    dressed in the trendiest clothes, placed throughout the store, offering
+                    inspiration for your next fashion statement.
+                    </small>
+                </p>
+            </div>
+        </div>    
+    </div>
+
+</div>
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="col-10 mx-auto mb-4 text-sm-center">
+            <h1 class="logo-font my-4">Contact:</h1>
+            <hr class="w-50" >
+            <p class="mb-0"><i class="fas fa-home me-3 text-white mx-2"></i>
+                7b Rainbow Avenue 
+                <br>
+                Dublin, Ireland
+            </p>
+            <p class="mb-0"><i class="fas fa-phone me-3 text-white mx-2"></i>Phone: 007 887 987</p>
+            <p><i class="fas fa-envelope me-3 text-white mx-2"></i>Email: urbanglamwear@urb.com</p>
+        </div>
+    </div>
 </div>
 {% endblock %}

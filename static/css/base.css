@@ -19,7 +19,7 @@ body {
 
 h1 {
     font-family: 'Sedgwick Ave Display', sans-serif;
-    font-size: 3.2vw;
+    font-size: clamp(25px, 3.2vw, 80px);
 }
 
 .small-fonts {
