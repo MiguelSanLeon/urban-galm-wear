@@ -37,6 +37,7 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [Product Detail Page](#product-detail-page)
         - [Bag Page](#bag-page)
         - [Checkout Page](#checkout-page)
+        - [Checkout Success Page](#checkout-success-page)
         - [Contact Us Page](#contact-us-page)
         - [About Us Page](#about-us-page)
         - [Privacy Policy Page](#privacy-policy-page)
@@ -290,11 +291,40 @@ This web application has been designed with bootstrap5 to be responsive across a
     - At the end of the list the page shows the bag total, the delivery total and the grand total.
     - The users can leave the bag using the "Keep Shopping" button or go to the checkout page by clicking on the "Secure Checkout" button.
 
+### Checkout Page
+
+![checkout-page-img](documentation_assets/checkout-page-img.png)
+
+    -The Checkout page is divided in 2 columns:
+        - The first column shows a form where the user can change the delivery information. At the button of this form the user can pay by using a credit or debit card. 
+        -The second column shows the order summary with the items details, images and the order total, delivery total and grand total.
+    - Under the first colum the user can find two button, "adjust bag" to go back to bag page and "Complete Order" to pay for the order shown in the order summary column.
+
+### Checkout Success Page
+
+![checkout-succces-page-img](documentation_assets/checkout-success-page-img.png)
+
+    - The Checkout Success page shows a summary of the order.
+    - The user will recieve an email with all the details of the order shown in the page.
+    - There is a button below the summary that redirects the user to the products page, filtered for new arrivals.
+
 ### Contact Us Page
 
-![Contact-us-page-img](documentation_assets/contact-us-page-img.png)
+![contact-us-page-img](documentation_assets/contact-us-page-img.png)
 
    - The Contact Us page is a custom form where the user can send a message to the web page admin.
    - The form only needs a name, an email address to contact back the user and the message body.
    - Under the form the user can find a "Submit" button that send all data to the database. 
+
+### About Us Page
+
+![about-us-page-img](documentation_assets/about-us-page-img.png)
+
+    -The About Us page shows a short description of the UWG physical shop with a picture and under this text the user can find the contact details for the physical shop including address, phone and email address.
+
+### Privacy Policy Page
+
+![privacy-policy-page-img](documentation_assets/privacy-policy-page-img.png)
+
+    - This page shows a legal text with all the privacy policy for this web page.
 

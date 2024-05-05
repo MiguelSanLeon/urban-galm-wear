@@ -367,6 +367,12 @@ a.category-badge > span.badge:hover {
     margin-bottom: 110px;
 }
 
+/* 404 page */
+
+.min-height-div {
+    min-height: 450px;
+}
+
     
 /* -------------------------------- Media Queries */
 
