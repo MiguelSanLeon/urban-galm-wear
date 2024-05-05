@@ -77,9 +77,9 @@
                                 <div class="col-12 text-center">
                                     {% if user.is_authenticated %}
                                         {% if product in wishlist %}
-                                            <a class="btn btn-outline-primary mt-2" role="button" aria-disabled="true" href="{% url 'add_to_wishlist' product.id %}">Remove from Wishlist</a>
+                                            <a class="btn btn-outline-primary mt-2" role="button" href="{% url 'add_to_wishlist' product.id %}">Remove from Wishlist</a>
                                         {% else %}
-                                            <a class="btn btn-outline-primary mt-2" role="button" aria-disabled="true" href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
+                                            <a class="btn btn-outline-primary mt-2" role="button" href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
                                         {% endif %}
                                     {% endif %}
                                 </div>
