@@ -37,4 +37,5 @@ go back to [README.md](/README.md)
 | Login Page | ![login](documentation_assets/testing/login.png) | <mark>Pass<mark> |
 | Logout Page | ![logout](documentation_assets/testing/logout.png) | <mark>Pass<mark> |
 | Wishlist Page | ![wishlist](documentation_assets/testing/wishlist.png) | <mark>Pass<mark> |
-
+| Product Management Page | ![product-management](documentation_assets/testing/product-management.png) | <mark>Pass<mark> |
+| 
