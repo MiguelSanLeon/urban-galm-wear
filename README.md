@@ -253,4 +253,48 @@ This web application has been designed with bootstrap5 to be responsive across a
 
 ![wishlist-page-img](documentation_assets/wishlist-page-img.png)
 
+    - The wishlist is a simple template that use a carousel to show all the users wishlist products.
+    - The cards shows all details and image of the product and a button to navigate to the products page.
+
+### Product Management
+
+![product-management-page-img](documentation_assets/product-management-page-img.png)
+
+    - The product management page contains a form that allows the admin user to Add new products to the database filling all the necesary inputs.
+    -There is an Add product button to add the product to the database and a cancel button that redirect the user to the products page.
+
+### Products Page
+
+![Products-page-img](documentation_assets/products-page-img.png)
+
+    - The Products Page is a list of all products displayed in horizontal cards that contains all the product data divided in 2 columns:
+        - The first column contains the picture of the product, the name, rate, carbon footprint, category and description.
+        - The second column contains the price, if the product has free shipping itself, a button to the product details page and the Add to wish list button. When the product is already in the wishlist, the button text change to Remove from wishlist, giving the user the posibility to remove the product from the user wishlist.
+        - At the upper-right corner of the product list the user can use a dropdown menu to sort the list with different filter.
+
+### Product Detail Page
+
+![product-details-page-img](documentation_assets/product-details-page-img.png)
+
+    - The product detail page shows all product details in a card where th user can have a clear view of the product with an image, a description, price, rate, carbon footprint and category.
+    - The user can also pick the product size and quantity to put it inside the bag by using the "Add to bag" button.
+    - The user can also Add the product to the wishlist or come back to the products page by using the "Keep shopping" button.
+    - If the user is an admin the product page also shows an "Edit" button to change the details of this product or delete the product from the database by using the "Delete" button.
+
+### Bag Page
+
+![bag-page-img](documentation_assets/bag-page-img.png)
+
+    - The bag page contains a list of products inside a table displaying the product image, the name and size, the price, the quantity and the subtotal for each product.
+    - The quantity of the listed product can be change by using the input text box and the button "Update". It can be removed from the bag by using the "Remove" button.
+    - At the end of the list the page shows the bag total, the delivery total and the grand total.
+    - The users can leave the bag using the "Keep Shopping" button or go to the checkout page by clicking on the "Secure Checkout" button.
+
+### Contact Us Page
+
+![Contact-us-page-img](documentation_assets/contact-us-page-img.png)
+
+   - The Contact Us page is a custom form where the user can send a message to the web page admin.
+   - The form only needs a name, an email address to contact back the user and the message body.
+   - Under the form the user can find a "Submit" button that send all data to the database. 
 
