@@ -10,7 +10,6 @@ go back to [README.md](/README.md)
 - [Tools Testing](#tools-testing)
 - [Manual Testing](#manual-testing)
     - [Browser Compatibility](#browser-compatibility)
-    - [Device Compatibility](#device-compatibility)
     - [Navbar Testing](#navbar-testing)
     - [Footer Testing](#footer-testing)
     - [Search Bar Testing](#search-bar-testing)
@@ -115,4 +114,38 @@ go back to [README.md](/README.md)
 
 |PAge|Lighthouse Report|
 | --- | --- |
-|
+| Home | ![home-lhr](documentation_assets/lighthouse/home-lhr.png)|
+| Registration | ![registration-lhr](documentation_assets/lighthouse/register-lhr.png)|
+| My Profile | ![my-profile-lhr](documentation_assets/lighthouse/my-profile-lhr.png)|
+| Login | ![login-lhr](documentation_assets/lighthouse/login-lhr.png)|
+| Logout | ![logout-lhr](documentation_assets/lighthouse/logout-lhr.png)|
+| Wishlist | ![wislist-lhr](documentation_assets/lighthouse/wishlist-lhr.png)|
+| Product management | ![product-management-lhr](documentation_assets/lighthouse/product-management-lhr.png)|
+| Products | ![products-lhr](documentation_assets/lighthouse/products-lhr.png)|
+| Product Details | ![product-details-lhr](documentation_assets/lighthouse/product-details-lhr.png)|
+| Bag | ![bag-lhr](documentation_assets/lighthouse/bag-lhr.png)|
+| Checkout | ![checkout-lhr](documentation_assets/lighthouse/checkout-lhr.png)|
+| Checkout-success | ![checkout-success-lhr](documentation_assets/lighthouse/checkout-success-lhr.png)|
+| Contact Us | ![contact-us-lhr](documentation_assets/lighthouse/contact-us-lhr.png)|
+| About Us | ![about-us-lhr](documentation_assets/lighthouse/about-us-lhr.png)|
+| Privacy Policy | ![privacy-policy-lhr](documentation_assets/lighthouse/privacy-policy-lhr.png)|
+| 404 | ![404-lhr](documentation_assets/lighthouse/404-lhr.png)|
+
+## Tools Testing
+
+[Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+## Manual Testing
+
+### Browser Compatibility
+
+Browser | Outcome | Pass/Fail |
+--- | --- | --- |
+Google Chrome | No appearance, responsiveness nor functionality issues.| <mark>Pass<mark> |
+Safari | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> |
+Mozilla Firefox | No responsiveness nor functionality issues.| <mark>Pass<mark> |
+Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> |
+
+
