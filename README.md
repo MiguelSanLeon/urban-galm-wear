@@ -198,7 +198,30 @@ This web application has been designed with bootstrap5 to be responsive across a
     The shopping bag icon is linked to the shopping bag page and shows the grand total under the icon.
     - The Urban Glam Wear banner is linked to home page.
     - There is a search bar that helps users to find products easily.
+    - At the very bottom of the navigation bar there is a banner that shows the minimum order cost for free delivery.
 
 - The footer:
 ![footer-img](documentation_assets/footer.png)
+    - The footer contains links to 4 social media, Facebook, Twitter(X), Instagram and LinkedIn.
+    - The user can navigate to Contact us page using a button.
+    - There are two links that provide access to About us page and Privacy policy page.
+    - The footer also shows an Urban Glam Wear banner and the stripe banner. At the very bottom ther is a copyright banner.
 
+### Home page
+
+![home-page-img](documentation_assets/homepage-img.png)
+
+    -The home page contains the navigation bar, the footer and a section with some usefull information and the Newsletter subscription section.
+    -Under the navigation bar there is a button, to access the products page, over a graffiti background image.
+
+### Register page
+
+![register-page-img](documentation_assets/register-page-img.png)
+
+- The email is the primary key for the registration process
+- Password1 and Password2 must match.
+- The password needs to contain both letters and numbers and cannot be a commonly used password.
+- All error messages will be displayed in the form to provide correct feedback to the user in case something went wrong during the registration process.
+- When the process is finished, the user will receive a successful message.
+
+![register-page-error-img](documentation_assets/register-page-error-img.png)
