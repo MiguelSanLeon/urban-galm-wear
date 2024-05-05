@@ -207,14 +207,14 @@ This web application has been designed with bootstrap5 to be responsive across a
     - There are two links that provide access to About us page and Privacy policy page.
     - The footer also shows an Urban Glam Wear banner and the stripe banner. At the very bottom ther is a copyright banner.
 
-### Home page
+### Home Page
 
 ![home-page-img](documentation_assets/homepage-img.png)
 
     -The home page contains the navigation bar, the footer and a section with some usefull information and the Newsletter subscription section.
     -Under the navigation bar there is a button, to access the products page, over a graffiti background image.
 
-### Register page
+### Register Page
 
 ![register-page-img](documentation_assets/register-page-img.png)
 
@@ -225,3 +225,32 @@ This web application has been designed with bootstrap5 to be responsive across a
 - When the process is finished, the user will receive a successful message.
 
 ![register-page-error-img](documentation_assets/register-page-error-img.png)
+
+### My Profile Page
+
+![my-profile-page-img](documentation_assets/my-profile-page-img.png)
+
+    - This profile page is divided in tu columns:
+        - The first column contains all the delivery information and the user can update this information using the update button below the form.
+        - The second column contains all the order history providing some usefull information about the orders and also a button to visit the order summary itself.
+
+### Login and Logout Pages
+
+![login-page-img](documentation_assets/login-page-img.png)
+
+    -This page contains the Django form for sign in where the user can login using the email address provided or the Username
+    - There is a checking box if the user wants the page to remember the login information.
+    - There are two buttons, one that redirect the user to the home page and the other to Sign in with the credential provided.
+    - At the very bottom of the form there is a link to reset the password.
+
+![logout-page-img](documentation_assets/logout-page-img.png)
+
+![password-reset-img](documentation_assets/password-reset-img.png)
+
+![password-reset-confirmation-img](documentation_assets/password-reset-confirmation-img.png)
+
+### Wishlist Page
+
+![wishlist-page-img](documentation_assets/wishlist-page-img.png)
+
+
