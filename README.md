@@ -162,5 +162,10 @@ For Titles and Branding the choosen font is Sedgwick Ave Display.
 ![Playfair-Display](documentation_assets/playfair_display.png)
 ![Sedgwick-Ave-Display](documentation_assets/sedgwick_ave_display.png)
 ### Wireframes
-The wireframes were created using balsamiq.
+
+[Balsamiq](https://balsamiq.com/) has been used to create all the wireframes for desktop and mobile views for this project.
+
+Page | Wireframe
+--- | ---
+
 
