@@ -167,5 +167,38 @@ For Titles and Branding the choosen font is Sedgwick Ave Display.
 
 Page | Wireframe
 --- | ---
+home | ![homepage-wireframe](documentation_assets/home%20_page%20_wf.png)
+My profile |  ![my-profile-wireframe](documentation_assets/my_profile_page_wf.png)
+Sign Up |  ![sign-up-wireframe](documentation_assets/sign_up_page_wf.png)
+Sign In |  ![sign-in-wireframe](documentation_assets/sign_in_page_wf.png)
+Sign Out |  ![sign-out-wireframe](documentation_assets/sign_out_page_wf.png)
+Wishlist |  ![wishlist-wireframe](documentation_assets/wishlist_page_wf.png)
+Products page |  ![products-page-wireframe](documentation_assets/product_page_wf.png)
+Product Detail |  ![product-detail-wireframe](documentation_assets/product_details_page_wf.png)
+Product management | ![product-management-wireframe](documentation_assets/product_management_page_wf.png)
+Shopping bag |  ![shopping-bag-wireframe](documentation_assets/shopping_bag_page_wf.png)
+Checkout |  ![checkout-wf-wireframe](documentation_assets/checkout_page-wf.png)
+Checkout success | ![checkout-success-wf-wireframe](documentation_assets/checkout_success_wf.png)
+About us |  ![about-us-wf-wireframe](documentation_assets/about_us_page_wf.png)
+Contact us |  ![contact-us-wf-wireframe](documentation_assets/contact_us_page_wf.png)
+Privacy Policy |  ![privacy-policy-wf-wireframe](documentation_assets/privacy_policy_page_wf.png)
 
+## Features
+
+### General
+
+This web application has been designed with bootstrap5 to be responsive across all devices.
+
+- Navigation bar:
+![navigation-bar-img](documentation_assets/navigation-bar.png)
+    - The navigation bar contain links with dropdown menus to navigate through all products and categories in the store.
+    - It also contains 2 icons, my account icon with a dropdown menu with all the options for account management. When no user is logged in the dropdown menu shows a link for registration and a link to log in.
+    When the user is logged in the dropdown menu shows a link to My profile page, a link to the Wishlist page and the log out link.
+    If the user is an admin it also provide a link to Product management page.
+    The shopping bag icon is linked to the shopping bag page and shows the grand total under the icon.
+    - The Urban Glam Wear banner is linked to home page.
+    - There is a search bar that helps users to find products easily.
+
+- The footer:
+![footer-img](documentation_assets/footer.png)
 
