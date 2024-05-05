@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '8000-miguelsanle-urbangalmwe-164zg1zisnn.ws-eu111.gitpod.io','urban-glam-wear-e8c11a4943c2.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '8000-miguelsanle-urbangalmwe-164zg1zisnn.ws-eu111.gitpod.io', 'urban-glam-wear-e8c11a4943c2.herokuapp.com']
 
 
 # Application definition
@@ -83,7 +83,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth 
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -119,7 +119,6 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 
-
 WSGI_APPLICATION = 'urban_glam_wear.wsgi.application'
 
 
@@ -130,7 +129,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else:    
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -233,5 +232,3 @@ else:
 
 # Set the default auto field to 'django.db.models.BigAutoField'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-

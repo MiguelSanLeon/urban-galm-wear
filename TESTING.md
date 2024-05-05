@@ -93,3 +93,26 @@ go back to [README.md](/README.md)
 | urls.py | Newsletter |![newsletter-urls](documentation_assets/testing/newsletter-urls.png) | <mark>Pass<mark> | |
 | views.py | Newsletter |![newsletter-views](documentation_assets/testing/newsletter-views.png) | <mark>Pass<mark> | |
 | admin.py | Products |![products-admin](documentation_assets/testing/products-admin.png) | <mark>Pass<mark> | |
+| apps.py | Products |![products-apps](documentation_assets/testing/products-apps.png) | <mark>Pass<mark> | |
+| forms.py | Products |![products-forms](documentation_assets/testing/products-forms.png) | <mark>Pass<mark> | |
+| models.py | Products |![products-models](documentation_assets/testing/products-models.png) | <mark>Pass<mark> | |
+| urls.py | Products |![products-urls](documentation_assets/testing/products-urls.png) | <mark>Pass<mark> | |
+| views.py | Products |![products-views](documentation_assets/testing/products-views.png) | <mark>Pass<mark> | |
+| widgets.py | Products |![products-widgets](documentation_assets/testing/products-widgets.png) | <mark>Pass<mark> | line 9 too long |
+| apps.py | Profiles |![profiles-apps](documentation_assets/testing/profiles-apps.png) | <mark>Pass<mark> | |
+| forms.py | Profiles |![profiles-forms](documentation_assets/testing/profiles-forms.png) | <mark>Pass<mark> | |
+| models.py | Profiles |![profiles-models](documentation_assets/testing/profiles-models.png) | <mark>Pass<mark> | |
+| urls.py | Profiles |![profiles-urls](documentation_assets/testing/profiles-urls.png) | <mark>Pass<mark> | |
+| views.py | Profiles |![profiles-views](documentation_assets/testing/profiles-views.png) | <mark>Pass<mark> | |
+| settings.py | urban_glam_wear |![urban-glam-wear-settings](documentation_assets/testing/settings.png) | <mark>Pass<mark> | 31, 86, 146, 149, 152, 155 lines too long |
+| urls.py | urban_glam_wear |![urban-glam-wear-urls](documentation_assets/testing/ugw-urls.png) | <mark>Pass<mark> | |
+| views.py | urban_glam_wear |![urban-glam-wear-views](documentation_assets/testing/ugw-views.png) | <mark>Pass<mark> | |
+| apps.py | Wishlist |![wishlist-apps](documentation_assets/testing/wishlist-apps.png) | <mark>Pass<mark> | |
+| urls.py | Wishlist |![wishlist-urls](documentation_assets/testing/wishlist-urls.png) | <mark>Pass<mark> | |
+| views.py | Wisklist |![wishlist-views](documentation_assets/testing/wishlist-views.png) | <mark>Pass<mark> | 
+
+## Accesibility
+
+|PAge|Lighthouse Report|
+| --- | --- |
+|

@@ -13,11 +13,15 @@ from profiles.models import UserProfile
 
 def search_products(query):
     """ A helper function to search for products based on a query """
-    return Product.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
+    return Product.objects.filter(Q(name__icontains=query)
+                                  | Q(description__icontains=query))
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """
+    A view to show all products,
+    including sorting and search queries
+    """
 
     products = Product.objects.all()
     query = None
@@ -64,8 +68,9 @@ def all_products(request):
             user_profile = UserProfile.objects.get(user=request.user)
             wishlist = Product.objects.filter(user_wishlist=user_profile)
     except UserProfile.DoesNotExist:
-        messages.error(request, "UserProfile does not exist for the authenticated user.")
-        
+        messages.error(request, "UserProfile does not exist"
+                       " for the authenticated user.")
+
     context = {
         'products': products,
         'search_term': query,
@@ -83,14 +88,15 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     user_profile = None
     wishlist = []
-    
+
     try:
         if request.user.is_authenticated:
             user_profile = UserProfile.objects.get(user=request.user)
             wishlist = Product.objects.filter(user_wishlist=user_profile)
     except UserProfile.DoesNotExist:
-        messages.error(request, "UserProfile does not exist for the authenticated user.")
-    
+        messages.error(request, "UserProfile does not exist for"
+                       " the authenticated user.")
+
     context = {
         'product': product,
         'wishlist': wishlist,
@@ -104,7 +110,8 @@ def add_product(request):
     """ Add a Product to the store """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, this action is allowed only for authorized users.')
+        messages.error(request, 'Sorry, this action is allowed'
+                       ' only for authorized users.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -114,7 +121,8 @@ def add_product(request):
             messages.success(request, 'Product successfully added!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure all data entries are correct and valid.')
+            messages.error(request, 'Failed to add product. Please ensure'
+                           ' all data entries are correct and valid.')
     else:
         form = ProductForm()
     template = 'products/add_product.html'
@@ -124,23 +132,28 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a Product """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, this action is allowed only for authorized users.')
+        messages.error(request, 'Sorry, this action is allowed'
+                       ' only for authorized users.')
         return redirect(reverse('home'))
 
-    product =get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, f'The product { product.name } has been updated successfully.')
+            messages.success(request, f'The product { product.name }'
+                             ' has been updated successfully.')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, f'Failed to update product { product.name }. Please check all data entries are correct')
+            messages.error(request, f'Failed to update product'
+                           f' { product.name }. Please check all data'
+                           ' entries are correct')
     else:
 
         form = ProductForm(instance=product)
@@ -161,7 +174,8 @@ def delete_product(request, product_id):
     """ Delete a product """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, this action is allowed only for authorized users.')
+        messages.error(request, 'Sorry, this action is allowed'
+                       ' only for authorized users.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -170,11 +184,13 @@ def delete_product(request, product_id):
     if request.method == 'POST':
         try:
             product.delete()
-            messages.success(request, f'The product "{product_name}" has been deleted successfully.')
+            messages.success(request, f'The product "{product_name}"'
+                             ' has been deleted successfully.')
             print(f'Redirecting to products page... {str(e)}')
             return redirect(reverse('products'))
         except Exception as e:
-            messages.error(request, f'Error deleting product "{product_name}": {str(e)}')
-   
+            messages.error(request, f'Error deleting product'
+                           f' "{product_name}": {str(e)}')
+
     print('Redirecting to Home page...')
     return redirect(reverse('home'))
