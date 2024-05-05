@@ -28,6 +28,8 @@ go back to [README.md](/README.md)
 
 ## Code Validation
 ### HTML
-    |Page|Validator|Results|
-    | --- | --- | --- |
-    |Home|
+
+|Page|Validator|Result|
+| --- | --- | --- |
+| Home Page | ![home](documentation_assets/testing/home.png) | <mark>Pass<mark>
+|Register Page | ![register](documentation_assets/testing/register.png) | <mark>Pass<mark>
