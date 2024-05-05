@@ -38,4 +38,4 @@ go back to [README.md](/README.md)
 | Logout Page | ![logout](documentation_assets/testing/logout.png) | <mark>Pass<mark> |
 | Wishlist Page | ![wishlist](documentation_assets/testing/wishlist.png) | <mark>Pass<mark> |
 | Product Management Page | ![product-management](documentation_assets/testing/product-management.png) | <mark>Pass<mark> |
-| 
+| Products Page | ![products-page](documentation_assets/testing/) | <mark>Pass<mark> |
