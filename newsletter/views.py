@@ -29,7 +29,7 @@ def subscribe(request):
             )
 
             messages.success(request, 'Thank you for subscribing to'
-                             'our newsletter. You will receive a'
+                             ' our newsletter. You will receive a '
                              'Welcome email soon.')
 
             return redirect('home')
