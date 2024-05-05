@@ -25,6 +25,10 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [Colour Scheme](#colour-scheme)
         - [Typography](#typography)
         - [Wireframes](#wireframes)
+        - [Agile Methodology](#Agile-Methodology)
+            - [Overview](#overview)
+            - [User Stories issues](#user-stories-issues)
+            - [GitHub Projects](#github-projects)
     - [Features](#features)
         - [General](#general)
         - [Home Page](#home-page)
@@ -42,10 +46,15 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [About Us Page](#about-us-page)
         - [Privacy Policy Page](#privacy-policy-page)
         - [404 Page](#404-page)
+    - [Search Engine Optimization SEO and Marketing](#search-engine-optimization-seo)
+        - [Business Model](#business-model)
+        - [SEO](#seo)
+    - [Marketing](#marketing)
     - [Technologies Used](#technologies-used)
         - [Languages Used](#languages-used)
         - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
         - [Packages / Dependencies Installed](#packages--dependencies-installed)
+        - [Technologies and programs](#technologies-and-programs)
     - [Testing](#testing)
         - [Code Validation](#code-validation)
             - [HTML](#html)
@@ -152,7 +161,9 @@ Total | 62 | 63
 - Wishlist
 - Newsletter subscription
 - Contact form
+
 ## Structure
+
 ### Database Model
 ![Db-model](documentation_assets/ugw_diagram.png)
 ### Colour Scheme
@@ -162,6 +173,7 @@ The Website has been created with 2 fonts. The main one is Playfair display.
 For Titles and Branding the choosen font is Sedgwick Ave Display.
 ![Playfair-Display](documentation_assets/playfair_display.png)
 ![Sedgwick-Ave-Display](documentation_assets/sedgwick_ave_display.png)
+
 ### Wireframes
 
 [Balsamiq](https://balsamiq.com/) has been used to create all the wireframes for desktop and mobile views for this project.
@@ -183,6 +195,22 @@ Checkout success | ![checkout-success-wf-wireframe](documentation_assets/checkou
 About us |  ![about-us-wf-wireframe](documentation_assets/about_us_page_wf.png)
 Contact us |  ![contact-us-wf-wireframe](documentation_assets/contact_us_page_wf.png)
 Privacy Policy |  ![privacy-policy-wf-wireframe](documentation_assets/privacy_policy_page_wf.png)
+
+### Agile Methodology
+
+#### Overview
+- This project was created using agile principles. Using the agile approach allowed me to plan all the features of the website through user stories.
+
+#### User Stories Issues
+- The user stories were used to implement all features in the project following agile methodology.
+
+![issues-img](documentation_assets/issues-img.png)
+
+#### GitHub Projects
+- The project was created using a basic Kanban Board structure, divided into columns such as Todo, In Progress and Done. This setup provides a clear and organized way to track the status of tasks and visualize and manage the workflow.
+
+![project-img](documentation_assets/project-img.png)
+
 
 ## Features
 
@@ -207,6 +235,9 @@ This web application has been designed with bootstrap5 to be responsive across a
     - The user can navigate to Contact us page using a button.
     - There are two links that provide access to About us page and Privacy policy page.
     - The footer also shows an Urban Glam Wear banner and the stripe banner. At the very bottom ther is a copyright banner.
+
+- Toast:
+    - Toasts from Bootstrap were implemented to provide customers with feedback regarding their actions on the website.
 
 ### Home Page
 
@@ -328,3 +359,116 @@ This web application has been designed with bootstrap5 to be responsive across a
 
     - This page shows a legal text with all the privacy policy for this web page.
 
+## Search Engine Optimization SEO and Marketing
+
+### Business Model
+The B2C (Business-to-Consumer) ecommerce model for this online shop operates as a platform catering to individual users looking to purchase a wide array of clothes conveniently from their homes. This model revolves around offering urban fashion wear from different urban tribes.
+
+Our peeps? They come from all walks of life, from fashion fiends to city slickers, students, and hustlers. We're here to hook up anyone craving that urban fashion fix with convenience, variety, bangin' prices, and a dope shopping experience.
+
+### SEO
+- Descriptive meta tags were added to the main template, including title, description and keywords.
+- A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/) This was generated using the deployed website. The file is included in the root level of the project.
+- Robots.txt file was created at the root level of the project. This file tells the search engine crawlers which URLs they can access on the website.
+
+### Marketing
+- Newsletter is included in the home page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
+
+- Facebook Page
+
+    - [Facebook page](https://www.facebook.com/profile.php?id=61558955314502)
+
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+    - The project uses HyperText Markup Language.
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+    - The project uses Cascading Style Sheets.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - The project uses JavaScript.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+    - The project uses Python.
+
+### Frameworks, Libraries and Programs Used
+
+- [Django 3](https://docs.djangoproject.com/en/3.2/)
+  - The project uses Django 3.2
+- [Boostrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+  - The project uses Bootstrap 5.
+- [ElephantSQL](https://customer.elephantsql.com/instance)
+  - The project uses ElephantSQL as a database provider.
+- [Codeanywhere](https://app.codeanywhere.com/)
+  - The project uses Codeanywhere for part of the development process.
+- [Gitpod](https://gitpod.io/workspaces)
+  - The project uses Gitpod for part of the development process.
+- [Chrome](https://www.google.com/intl/en_uk/chrome/)
+  - The project uses Chrome to debug and test the source code using HTML5.
+- [Balsamiq](https://balsamiq.com/)
+  - Balsamiq was used to create the wireframes during the design process.
+- [Google Fonts](https://fonts.google.com/)
+  - Google fonts were used to import the fonts.
+- [GitHub](https://github.com/)
+  - GitHub was used to store the project's code after being pushed from Git.
+- [Heroku](https://dashboard.heroku.com/apps)
+  - Heroku was used to deploy the project.
+- [Icons8](https://icons8.com/icons)
+  - Icons8 was used to find a favicon for the project.
+- [Dbdiagram](https://dbdiagram.io/home)
+  - Dbdiagram was used to create the database diagram.
+- [Tiny PNG](https://tinypng.com)
+  - Tiny PNG was used to reduce the file size of the images.
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+  - Chrome DevTools was used during development process for code review and to test responsiveness.
+- [W3C Markup Validator](https://validator.w3.org/)
+  - W3C Markup Validator was used to validate the HTML code.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+  - W3C CSS Validator was used to validate the CSS code.
+- [JSHint](https://jshint.com/)
+  - The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code
+
+### Packages / Dependencies Installed
+
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)  
+  - Django Allauth was used for user authentication, registration, and account management.
+  
+- [Gunicorn](https://gunicorn.org/)  
+  - Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
+
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+  -  Boto3 is the Amazon Web Services (AWS) SDK for Python. It allows to interact with AWS services, such as S3.
+
+- [Django Countries](https://pypi.org/project/django-countries/)
+  - Django countries is a Django application that provides country choices for use with forms, flag icons static files, and a country field for models.
+
+- [Django crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  -This is a Django application that allows developers to control the rendering behavior of Django forms.
+- [Django storages](https://django-storages.readthedocs.io/en/latest/)
+  - Django-storages is a collection of custom storage backends for Django.
+- [pillow](https://pypi.org/project/pillow/)
+  - The Python Imaging Library adds image processing capabilities to your Python interpreter.
+- [Psycopg2](https://pypi.org/project/psycopg2/)
+  - Psycopg2 is a PostgreSQL adapter for Python. It allows Django to connect to PostgreSQL databases.
+- [s3transfer](https://pypi.org/project/s3transfer/)
+  - S3 Transfer is a library for managing file transfers to and from Amazon S3 storage.
+- [stripe](https://stripe.com/ie)
+  - Stripe is an application that allows users to handle payment processing in a secure and convenient way.
+
+### Technologies and Programs
+
+  - [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate Favicon
+  - [GitHub](https://github.com/) is the hosting site used to store the code for the website.
+  - [Google Fonts](https://fonts.google.com/) was used to import fonts.
+  - [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) was used during the testing of the website.
+  - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/) was used during testing, debugging and making the website responsive.
+  - [AWS](https://aws.amazon.com/) was used to store media files.
+  - [Stripe](https://stripe.com/en-ie) was integrated to handle payment processing in a secure and convenient way.
+  - [W3C HTML Validator](https://validator.w3.org/) was used to check for errors in the HTML code.
+  - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to check for errors in the CSS code
+  - [Js Hint](https://jshint.com/) was used to validate the JavaScript code.
+  - [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code.
+
+## Testing
+Testing documentation can be found [here.](TESTING.md)
