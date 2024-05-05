@@ -6,6 +6,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from .models import Subscriber
 
+
 def subscribe(request):
     form = SubscriptionForm()
     if request.method == 'POST':
@@ -16,11 +17,11 @@ def subscribe(request):
                 messages.warning(request, 'This email is already subscribed.')
             else:
                 subscriber = form.save()
-                subject_template = 'newsletter/email_subject.txt'
-                body_template = 'newsletter/email_body.html'
+                subject_templ = 'newsletter/email_subject.txt'
+                body_templ = 'newsletter/email_body.html'
 
-                subject = render_to_string(subject_template).strip()
-                body = render_to_string(body_template, {'subscriber': subscriber})
+                subject = render_to_string(subject_templ).strip()
+                body = render_to_string(body_templ, {'subscriber': subscriber})
 
                 send_mail(
                     subject,
@@ -31,7 +32,9 @@ def subscribe(request):
                     html_message=body
                 )
 
-                messages.success(request, 'Thank you for subscribing to our newsletter. You will receive a Welcome email soon.')
+                messages.success(request, 'Thank you for subscribing to our'
+                                 'newsletter. You will receive a'
+                                 ' Welcome email soon.')
                 return redirect('home')
 
     context = {'form': form}

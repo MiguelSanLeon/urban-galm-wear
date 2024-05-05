@@ -67,5 +67,29 @@ go back to [README.md](/README.md)
 ### Python
 
 
-|File|Validator|Result|Comments|
-| --- | --- | --- | --- |
+|File|App|Validator|Result|Comments|
+| --- | --- | --- | --- | --- |
+| apps.py | Bag | ![bag-apps](documentation_assets/testing/bag-apps.py.png) | <mark>Pass<mark> | |
+| contexts.py | Bag | ![bag-apps](documentation_assets/testing/bag-contexts.png) | <mark>Pass<mark> | |
+| urls.py | Bag | ![bag-urls](documentation_assets/testing/bag-urls.png) | <mark>Pass<mark> | |
+| views.py | Bag | ![bag-views](documentation_assets/testing/bag-views.png) | <mark>Pass<mark> | |
+| admin.py | Checkout | ![checkout-admin](documentation_assets/testing/checkout-admin.png) | <mark>Pass<mark> | |
+| apps.py | Checkout |![checkout-apps](documentation_assets/testing/checkout-apps.png) | <mark>Pass<mark> | |
+| forms.py | Checkout |![checkout-forms](documentation_assets/testing/checkout-forms.png) | <mark>Pass<mark> | |
+| models.py | Checkout |![checkout-models](documentation_assets/testing/checkout-models.png) | <mark>Pass<mark> | |
+| signals.py | Checkout |![checkout-signals](documentation_assets/testing/checkout-signals.png) | <mark>Pass<mark> | |
+| urls.py | Checkout |![checkout-urls](documentation_assets/testing/checkout-urls.png) | <mark>Pass<mark> | |
+| views.py | Checkout |![checkout-views](documentation_assets/testing/checkout-views.png) | <mark>Pass<mark> | File 80 to long: not possible to fix the line |
+| admin.py | Home |![home-admin](documentation_assets/testing/home-admin.png) | <mark>Pass<mark> | |
+| apps.py | Home |![home-apps](documentation_assets/testing/home-apps.png) | <mark>Pass<mark> | |
+| forms.py | Home |![home-forms](documentation_assets/testing/home-forms.png) | <mark>Pass<mark> | |
+| models.py | Home |![home-models](documentation_assets/testing/home-models.png) | <mark>Pass<mark> | |
+| urls.py | Home |![home-urls](documentation_assets/testing/home-urls.png) | <mark>Pass<mark> | |
+| views.py | Home |![home-views](documentation_assets/testing/home-views.png) | <mark>Pass<mark> | |
+| admin.py | Newsletter |![newsletter-admin](documentation_assets/testing/newsletter-admin.png) | <mark>Pass<mark> | |
+| apps.py | Newsletter |![newsletter-apps](documentation_assets/testing/newsletter-apps.png) | <mark>Pass<mark> | |
+| forms.py | Newsletter |![newsletter-forms](documentation_assets/testing/newsletter-forms.png) | <mark>Pass<mark> | |
+| models.py | Newsletter |![newsletter-models](documentation_assets/testing/newsletter-models.png) | <mark>Pass<mark> | |
+| urls.py | Newsletter |![newsletter-urls](documentation_assets/testing/newsletter-urls.png) | <mark>Pass<mark> | |
+| views.py | Newsletter |![newsletter-views](documentation_assets/testing/newsletter-views.png) | <mark>Pass<mark> | |
+| admin.py | Products |![products-admin](documentation_assets/testing/products-admin.png) | <mark>Pass<mark> | |
