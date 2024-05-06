@@ -5,7 +5,7 @@
 
 
 ## Introduction
-[Link to deployed site](https://book-heaven-e537b3f88787.herokuapp.com/)
+[Link to deployed site](https://urban-glam-wear-e8c11a4943c2.herokuapp.com/)
 Urban Glam Wear is an online clothes shopping site designed for urban fashionists and created using Django, Python, HTML, CSS JavaScript, Amazon Web Services, and Stripe.
 
 
@@ -54,8 +54,6 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [Business Model](#business-model)
         - [SEO](#seo)
     - [Marketing](#marketing)
-    - [Business Model](#business-model)
-
     - [Technologies Used](#technologies-used)
         - [Languages Used](#languages-used)
         - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
