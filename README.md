@@ -54,6 +54,8 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [Business Model](#business-model)
         - [SEO](#seo)
     - [Marketing](#marketing)
+    - [Business Model](#business-model)
+
     - [Technologies Used](#technologies-used)
         - [Languages Used](#languages-used)
         - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
@@ -431,10 +433,42 @@ This web application has been designed with bootstrap5 to be responsive across a
 
 
 ### Business Model
-The B2C (Business-to-Consumer) e-commerce model for this online shop operates as a platform catering to individual users looking to purchase a wide array of clothes conveniently from their homes. This model revolves around offering urban fashion wear from different urban tribes.
+- Company Description:
 
+Urban Glam Wear is a dynamic B2C fashion enterprise catering to the urban and nightlife scene, offering a fusion of skater, hip-hop street style, and clubwear. Our mission is to provide trendsetting individuals with high-quality, edgy apparel that reflects their unique style and personality. In addition to our fashion offerings, we aim to cultivate a vibrant community around urban culture and fashion expression.
 
-Our peeps? They come from all walks of life, from fashion fiends to city slickers, students, and hustlers. We're here to hook up anyone craving that urban fashion fix with convenience, variety, bangin' prices, and a dope shopping experience.
+- Customers:
+
+Our target demographic comprises trend-conscious individuals immersed in urban subcultures, including skaters, hip-hop enthusiasts, and nightclub-goers. These individuals are fashion-forward, seeking statement pieces that reflect their bold, expressive lifestyles.
+
+- Competitors:
+
+In the realm of urban fashion, we identify several types of competitors. Some focus solely on specific niches within urban culture, such as skatewear or streetwear brands like Supreme, Thrasher, and Palace. Others cater to a broader audience with a diverse range of fashion styles, but lack the specialized focus on urban subcultures that we offer. Additionally, there are smaller boutique brands and local retailers that may offer similar styles but lack the online presence and community engagement that distinguish Urban Glam Wear.
+
+- SWOT Analysis:
+
+- Strengths:
+
+Distinctive blend of skater, hip-hop, and nightclub fashion styles under one roof.
+Strong online presence with a user-friendly website and active social media presence.
+Passionate team with a deep understanding and appreciation for urban culture.
+- Weaknesses:
+
+Establishing brand recognition in a competitive market.
+Balancing inventory between online and physical store locations.
+- Opportunities:
+
+Expansion of physical store locations in key urban centers.
+Collaborations with local artists, musicians, and influencers to amplify brand visibility.
+- Threats:
+
+Fast-changing fashion trends requiring agility in product offerings.
+Competition from established urban fashion brands and emerging startups.
+Marketing Strategy
+
+Given our focus on building brand recognition with limited resources, we prioritize online channels and community engagement. Our marketing efforts include maintaining an active presence on social media platforms popular among our target demographic, such as Instagram, TikTok, and Snapchat. We leverage these platforms to showcase our latest collections, engage with followers, and collaborate with influencers who resonate with our brand ethos.
+
+Furthermore, we host exclusive events, pop-up shops, and collaborations with local artists and musicians to foster a sense of community and excitement around Urban Glam Wear. Through strategic partnerships and creative marketing campaigns, we aim to solidify our position as the go-to destination for urban fashion enthusiasts seeking cutting-edge styles and a vibrant cultural experience.
 
 
 ### SEO
@@ -451,6 +485,8 @@ The newsletter is included in the home page. This section facilitates user engag
 
 
     - [Facebook page](https://www.facebook.com/profile.php?id=61558955314502)
+
+
 
 
 [Go to the top](#table-of-contents)
