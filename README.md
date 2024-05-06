@@ -50,7 +50,7 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [About Us Page](#about-us-page)
         - [Privacy Policy Page](#privacy-policy-page)
         - [404 Page](#404-page)
-    - [Search Engine Optimization SEO and Marketing](#search-engine-optimization-seo)
+    - [Search Engine Optimization SEO and Marketing](#search-engine-optimization-seo-and-marketing)
         - [Business Model](#business-model)
         - [SEO](#seo)
     - [Marketing](#marketing)
