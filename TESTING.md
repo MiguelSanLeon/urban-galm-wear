@@ -28,6 +28,7 @@ go back to [README.md](/README.md)
     - [Wishlist Page Testing](#wishlist-page-testing)
 
 ## Code Validation
+
 ### HTML
 
 |Page|Validator|Result|
@@ -111,6 +112,8 @@ go back to [README.md](/README.md)
 | urls.py | Wishlist |![wishlist-urls](documentation_assets/testing/wishlist-urls.png) | <mark>Pass<mark> | |
 | views.py | Wisklist |![wishlist-views](documentation_assets/testing/wishlist-views.png) | <mark>Pass<mark> | 
 
+[Go to the top](#testing)
+
 ## Accesibility
 
 |PAge|Lighthouse Report|
@@ -132,11 +135,15 @@ go back to [README.md](/README.md)
 | Privacy Policy | ![privacy-policy-lhr](documentation_assets/lighthouse/privacy-policy-lhr.png)|
 | 404 | ![404-lhr](documentation_assets/lighthouse/404-lhr.png)|
 
+[Go to the top](#testing)
+
 ## Tools Testing
 
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 
 Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+[Go to the top](#testing)
 
 ## Manual Testing
 
@@ -222,4 +229,40 @@ Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark
 
 No interactive elements to test
 
-### 
+### Privacy Policy Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|  | Click on links in privacy policy page | Redirects to the correct page | Pass |  |
+
+### 404 Page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|  | Click on Return to main page button | Redirects to the correct page | Pass |  |
+
+### Register page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Registration form | Input incorrect data | Shows feedback messages to let the user knows about the incorrect data | Pass |  |
+|  | Click on Sign up button | Redirects the user to confirm-email page and shows an alert informing the user that an email has been sent to the email provided | Pass |  |
+### Login Page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|  | Click on Sign in button | Redirects the user ro Home page and shows a success message  | Pass |  |
+### Logout Page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|  | Click on Sign out button | Redirects to Home page and shows a success message | Pass |  |
+
+### Product Management Page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Add Product Form | Input incorrect data in form | Shows feedback messages to correct the issues | Pass |  |
+|  | Click on Cancel button | Redirects the user to products page | Pass |  |
+|  | Click on Add Product button | Redirects the user to product details page and shows a success message | Pass |  |
+### Wishlist Page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|  | Click on Product Page button | Redirects to correct page | Pass |  |
+|  | Click on left and right arrow buttons | Move to next wishlist product in the carousel | Pass |  |
+
+[Go to the top](#testing)

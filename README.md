@@ -57,6 +57,8 @@ Urban Glam Wear is an online clothes shopping site designed for urban fashionist
         - [Technologies and programs](#technologies-and-programs)
     - [Testing](#testing)
     - [Deployment](#deployment)
+        - [Stripe Setup](#stripe-setup)
+        - [AWS Setup](#aws-setup)
         - [Deploying on Heroku](#deploying-on-heroku)
     - [Credits](#credits)
         - [Content](#content)
@@ -117,6 +119,8 @@ Avoid double checkout | 5 | 4
 checkout email | 3 | 3
 Total | 62 | 63
 
+[Go to the top](#table-of-contents)
+
 ## Scope
 
 ### Phase 1
@@ -137,6 +141,8 @@ Total | 62 | 63
 - Wishlist
 - Newsletter subscription
 - Contact form
+
+[Go to the top](#table-of-contents)
 
 ## Structure
 
@@ -187,6 +193,7 @@ Privacy Policy |  ![privacy-policy-wf-wireframe](documentation_assets/privacy_po
 
 ![project-img](documentation_assets/project-img.png)
 
+[Go to the top](#table-of-contents)
 
 ## Features
 
@@ -335,6 +342,8 @@ This web application has been designed with bootstrap5 to be responsive across a
 
     - This page shows a legal text with all the privacy policy for this web page.
 
+[Go to the top](#table-of-contents)
+
 ## Search Engine Optimization SEO and Marketing
 
 ### Business Model
@@ -354,6 +363,7 @@ Our peeps? They come from all walks of life, from fashion fiends to city slicker
 
     - [Facebook page](https://www.facebook.com/profile.php?id=61558955314502)
 
+[Go to the top](#table-of-contents)
 
 ## Technologies Used
 
@@ -446,5 +456,189 @@ Our peeps? They come from all walks of life, from fashion fiends to city slicker
   - [Js Hint](https://jshint.com/) was used to validate the JavaScript code.
   - [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code.
 
+[Go to the top](#table-of-contents)
+
 ## Testing
 Testing documentation can be found [here.](TESTING.md)
+
+[Go to the top](#table-of-contents)
+
+## Deployment
+
+### Stripe Setup
+
+- Log in to [Stripe](https://stripe.com/en-ie)
+- Navigate to developers section (link located at the top right)
+- Go to API keys tab and copy the values of PUBLIC_KEY and SECRET_KEY and add them to your env.py file
+- Navigate to the Webhooks page from the tab in the menu at the top and click on add endpoint.
+- This section requires a link to the deployed application. The link should look like this https://your_website.herokuapp.com/checkout/wh/ 
+- Choose the events the webhook should recieve and add endpoint.
+- When the application is deployed, run a test transaction to ensure the webhooks are working. The events chan be checked in the webhooks page.
+
+### AWS Setup
+
+- Log in to [AWS](https://aws.amazon.com/)
+1. Create a new S3 bucket:
+- Choose the closest AWS region.
+- Add unique bucket name.
+- Under Object Ownership select ACLs enabled to allow access to the objects in the bucket.
+- Under Block Public Access settings unselect block all public access as the application will need access to the objects in the bucket.
+- Click on create bucket.
+2. Edit bucket settings.
+- Bucket properties
+  - Open the bucket page.
+  - Go to properties tab and scroll down to website hosting and click on edit.
+  - Enable static website hosting
+  - Under the Hosting type section ensure Host a static website is selected.
+  - Add Index.html to index document field and error.html to error document field and click save.
+- Bucket permissions
+    - Navigate and Click on the "Permissions" tab.
+    - Scroll down to the "CORS configuration" section and click edit.
+    - Enter the following snippet into the text box and click on save changes.
+
+    ```
+    [
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+    ]
+    ```
+    - Scroll to bucket policy section and click edit. Take note of the bucket arn (Example: arn:aws:s3:::test-bucket)
+    - Click on policy generator and set the following settings:
+
+        1. Select Type of Policy - S3 Bucket Policy
+        2. Effect Allow
+        3. Principal *
+        4. AWS Service Amazon S3
+        5. Actions: GetObject
+        6. Amazon arn: your arn from the previous page
+
+    - Click on add statement and then generate policy.Copy the policy
+    - Paste the policy into the bucket policy editor.
+    - Add "/*" to the end of the resource key to allow access to all resources in this bucket.
+    - Navigate and Click Save changes.
+    - For the Access control list (ACL) section, click edit and enable List for Everyone (public access) and accept the warning box. If the edit button is disabled, you need to change the Object Ownership section above to ACLs enabled (refer to Create Bucket section above).
+3. Identify and Access Management (IAM)
+- Create User group
+    - In the search bar, search for IAM. 
+    - On the IAM page select user groups in the menu on the left.
+    - Click on create user group, add a name and click create group. The users and permission policies will be added later.
+- Create Permissions policy for the user group
+    - Go to Policies in the left-hand menu and click create policy
+    - Click on actions and import policy.
+    - Search for "AmazonS3FullAccess", select this policy, and click "Import".
+    - Click "JSON" under "Policy Document" to see the imported policy
+    - Copy the bucket ARN from the bucket policy page and paste it into the "Resource" section of the JSON snippet. Be sure to remove the default value of the resource key ("*") and replace it with the bucket ARN.
+    Copy the bucket ARN a second time into the "Resource" section of the JSON snippet. This time, add "/*" to the end of the ARN to allow access to all resources in this bucket.
+
+    ``````
+        {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:*",
+                    "s3-object-lambda:*"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::your-project",
+                    "arn:aws:s3:::your-project/*"
+                ]
+            }
+        ]
+    }
+
+    ``````
+
+
+    - On the next page add polcity name and description and click create policy.
+
+- Attach Policy to User Group
+    - Click on User Groups in the left-hand menu.
+    - Click on the user group name created during the above step and select the permissions tab.
+    - Click Attach Policy.
+    - Search for the policy created during the above step, select it and click attach policy.
+
+- Create User
+    - Click on Users in the left-hand menu and click on add user.
+    - Enter a User name .
+    - Select Programmatic access and AWS Management Console access and click next.
+    - Click on add user to group, select the user group created earlier and click create user.
+    - Take note of the Access key ID and Secret access key as these will be needed to connect to the S3 bucket.
+    - To save a copy of the credentials click Download .csv
+
+### Deploying on Heroku
+
+- To deploy the project on Heroku, first create an account.
+- Once logged in, create a new app by clicking on the create app button
+- Pick a unique name for the app, select a region, and click Create App.
+- On the next page select the settings tab and scroll down to Config Vars. If there are any files that should be hidden like credentials and API keys they should be added here. In this project, there are credentials that need to be protected. This project requires credentials added for:
+
+        1. Django's secret key
+        2. Database Credentials
+        3. AWS access key 
+        3. AWS secret key
+        4. Email host password.
+        5. Stripe public key
+        6. stripe secret key
+        7. Stripe wh secret
+
+- Scroll down to Buildpacks. The buildpacks will install further dependencies that are not included in the requirements.txt. For this project, the buildpack required is Python
+- From the tab above select the deploy section.
+- The deployment method for this project is GitHub. Once selected, confirm that we want to connect to GitHub, search for the repository name, and click connect to connect the Heroku app to our GitHub code.
+- Scroll further down to the deploy section where automatic deploys can be enabled, which means that the app will update every time code is pushed to GitHub. Click deploy and wait for the app to be built. Once this is done, a message should appear letting us know that the app was successfully deployed with a view button to see the app.
+
+[Go to the top](#table-of-contents)
+
+## Credits
+
+### Content
+
+- Website content was written by the developer.
+
+### Media
+
+- [Pexel](https://www.pexels.com/)
+
+- Skater one image was created in photoshop using an this image from pexel:[Skater one](https://www.pexels.com/photo/man-holding-bamboo-plant-wearing-sunglasses-and-fedora-hat-1656684/)
+- The rest of images were create using Ideogram AI: [Ideogram](https://ideogram.ai/t/explore)
+
+### Code 
+
+- [Stack Overflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis.
+- [Django documentation](https://docs.djangoproject.com/en/3.2/) and [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) were consulted for a better understanding of this frameworks.
+- [Coding Ninja](https://www.codingninjas.com/studio) was consulted to get information about allauth library.
+
+[Go to the top](#table-of-contents)
+
+## Known Bugs
+
+| Bug or issue | Status |
+| --- | --- |
+| Mobile top header had a bug cause the list items were not inside an ordered/unordered list | Solved |
+| Go shopping was a button inside an anchor | Solved |
+| There was two Footer labels in footer, one contained the other | Solved |
+| In Custom_clearable_file_input.html there was a duplicated id cause of a django template already had one | Solved |
+| There was a p inside an strong in Custom_clearable_file_input.html | Solved |
+| Quantity in bag table didn't have a max top when input a quantity | Solved |
+| Success messages when update or remove quantity in bag table are not working | Not solved |
+
+[Go to the top](#table-of-contents)
+
+## Acknowledgements
+
+- Huge Thanks to my Mentor Marcel for all his help and his patience.
+- The Wonderful Slack community that is allways there to help.
+- My family that allways support me and give me hope and faith.
+
+[Go to the top](#table-of-contents)
