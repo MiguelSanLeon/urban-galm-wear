@@ -13,11 +13,13 @@ go back to [README.md](/README.md)
     - [Navbar Testing](#navbar-testing)
     - [Home Page Testing](#home-page-testing)
     - [Product Page Testing](#product-page-testing)
-    - [Product Detail Page Testing](#product-detail-page-testing)
+    - [Product Details Page Testing](#product-details-page-testing)
     - [Bag Testing](#bag-testing)
-    - [Checkout Page Testing](#checkout-page-testing)
-    - [Contact Us Page Testing](#contact-us-page-testing)
-    - [Privacy Policy Page Testing](#privacy-policy-page-testing)
+    - [Checkout Testing](#checkout-testing)
+    - [Checkout Success Testing](#checkout-success-testing)
+    - [Contact Us Testing](#contact-us-testing)
+    - [About Us Testing](#about-us-testing)
+    - [Privacy Policy Testing](#privacy-policy-testing)
     - [404 Page Testing](#404-page-testing)
     - [Register Page Testing](#register-page-testing)
     - [Login Page Testing](#login-page-testing)
@@ -150,42 +152,68 @@ Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark
 ### Navbar Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-| Navbar | Click on the logo | Redirect to Home | Pass | The mobile version has a Home link in the dropdown menu |
+| Navbar | Click on the logo | Redirects to Home | Pass | The mobile version has a Home link in the dropdown menu |
 |  | Click on the categorires links in navbar | Open the dropdown menus  | Pass |   |
-|  | Click the links inside the dropdown menus | Redirect to correct page | Pass |  |
+|  | Click the links inside the dropdown menus | Redirects to correct page | Pass |  |
 |  | Click on My Account icon | Open the dropdown menu | Pass |  |
 |  | Click on the links in My account dropdown menu | Redirect to correct page | Pass |  |
 |  | Click on Bag icon | Redirect to Shopping bag page  | Pass |  |
 | Search bar | Type keywords | Return correct results | Pass |  |
 
 ### Home Page Testing
-| Home | Click on Go Shopping button | Redirect to products page | Pass |  |
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Home | Click on Go Shopping button | Redirects to products page | Pass |  |
 | Newsletter | Type a valid email and click on subscribe button | Show a succes message  | Pass | when typing a not valid email the user receive feedback messages showing what is wrong with the email entered 
-| Footer | Click on Contact Us button | Redirect to correct page | Pass |  |
-|  | Click on About Us link | Redirect to correct page | Pass |  |
-|  | Click on Privacy Policy link | Redirect to correct page | Pass |  |
-|  | Click on Social Media icons | Redirect to the correct page | Pass |  |
+| Footer | Click on Contact Us button | Redirects to correct page | Pass |  |
+|  | Click on About Us link | Redirects to correct page | Pass |  |
+|  | Click on Privacy Policy link | Redirects to correct page | Pass |  |
+|  | Click on Social Media icons | Redirects to the correct page | Pass |  |
 
 ### Product Page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
 | Product page | Use the Sorting menu | Reorder the product list | Pass |  |
-| Product card | Clck on Details button | Redirect to Product details page | Pass |  |
+| Product card | Clck on Details button | Redirects to Product details page | Pass |  |
 |  | Click on Add to wishlist button | Shows a success message | Pass | It also change the Add to wishlist button text to Remove from Wishlist in the product card |
 |  | Click on Remove from wishlist button | Shows a success message | Pass | IT also change the Remove from wishlist button text to Add to wishlist button |
 
-### Product Details Page
-| Product Details card | use the dropdown menu for size selection | change the actual selection | Pass |  |
+### Product Details Page Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Product Details card | use the dropdown menu for size selection | Change the actual selection | Pass |  |
 |  | Use the Quantity up/down arrows to add/rest units | Change the quantity number adding/removing one when clicked | Pass |  |
-|  | Type a correct number in Quantity input area | change the quantity number | Pass | When typing something different from a number the user receive feedback messages to enter a correct number. It also has a top quantity of 99 units |
+|  | Type a correct number in Quantity input area | Change the quantity number | Pass | When typing something different from a number the user receive feedback messages to enter a correct number. It also has a top quantity of 99 units |
 |  | Click on Add to wishlist button | Shows a success message | Pass | It also change the Add to wishlist button text to Remove from Wishlist in the product card |
 |  | Click on Remove from wishlist button | Shows a success message | Pass | IT also change the Remove from wishlist button text to Add to wishlist button |
 |  | Click on Add to bag button | Shows a Succes message with your bag content and a button to go to Secure Checkout | Pass | The button in the Success message is redirecting correctly to Checkout page |
-|  | Click on Keep Shopping button | Redirect to Products page | Pass |  |
-| Only for Admin Users | Click on Edit button | Redirect to Product management Edit page with all the product data displayed on the form. | Pass | It also shows an Alert message to the admin that said "You are editing Yoga set |
+|  | Click on Keep Shopping button | Redirects to Products page | Pass |  |
+| Only for Admin Users | Click on Edit button | Redirects to Product management Edit page with all the product data displayed on the form. | Pass | It also shows an Alert message to the admin that said "You are editing Yoga set |
 |  | Click on Delete button | Show a modal Asking the admin for deletion confirmation | Pass | The App shows an abnormal behavior when clicking yes in the modal showing a message with the text undefined. But the product is deleted properly and no other issues are detected |
 
 ### Bag Testing
-| Product info | Click on Quantity add/remove arrows | Add/remove 1 from acutal number | Pass | input a number works as well and  |
-|  | Click on Update after  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Product info | Click on Quantity add/remove arrows | Add/remove 1 from acutal number | Pass | input a number works as well and still has a limit of 99 products |
+|  | Click on Update after changing the quantity number | Change the quantity number and update the subtotal | Pass |  |
+|  | Click on Remove | Remove the product from the bag | Pass |  |
+|  | Click on Keep Shopping button | Redirects the user to Products page | Pass |  |
+|  | Click on Secure Checkout button | Redirects the user to Checkout page | Pass |  |
+
+### Checkout Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Checkout form | Input incorrect data to form | Shows feedback messages to the user to fix the problem  | Pass |  |
+|  | Click on Adjust Bag button | Redirects the user to Checkout page | Pass |  |
+|  | Click on complete order button | Redirects the user to Checkout Success page | Pass | It also shows a success message informing the user that the order was processed and an email will be sent to the users email |
+
+### Checkout Success Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|  | Click on Have a look button | Redirects user to Products page filtered by New arrivals category | Pass |  |
+
+### Contact Us Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Contact us form |  Input incorrect data to form | Shows feedback messages to the user to fix the problem | Pass |  |
+|  | click on Submit button |  |  |  |
