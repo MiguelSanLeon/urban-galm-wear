@@ -216,4 +216,10 @@ Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 | Contact us form |  Input incorrect data to form | Shows feedback messages to the user to fix the problem | Pass |  |
-|  | click on Submit button |  |  |  |
+|  | click on Submit button | Shows a success message  | Pass |  |
+
+### About Us Testing
+
+No interactive elements to test
+
+### 
