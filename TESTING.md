@@ -1,5 +1,6 @@
 go back to [README.md](/README.md)
 
+
 # Testing
 - [Code Validation](#code-validation)
     - [HTML](#html)
@@ -27,9 +28,12 @@ go back to [README.md](/README.md)
     - [Product Management Page Testing](#product-management-page-testing)
     - [Wishlist Page Testing](#wishlist-page-testing)
 
+
 ## Code Validation
 
+
 ### HTML
+
 
 |Page|Validator|Result|
 | --- | --- | --- |
@@ -50,7 +54,9 @@ go back to [README.md](/README.md)
 | Privacy Policy Page | ![privacy-policy](documentation_assets/testing/privacy-policy.png) | <mark>Pass<mark> |
 | 404 Page | ![404](documentation_assets/testing/404.png) | <mark>Pass<mark> |
 
+
 ### CSS
+
 
 |File|Validator|Result|
 | --- | --- | --- |
@@ -58,14 +64,19 @@ go back to [README.md](/README.md)
 | checkout.css | ![checkout.css](documentation_assets/testing/checkout-css.png) | <mark>Pass<mark> |
 | profile.css | ![profile.css](documentation_assets/testing/profile-css.png) | <mark>Pass<mark> |
 
+
 ### JavaScript
+
 
 |File|Validator|Result|Comments|
 | --- | --- | --- | --- |
 | stripe_elements.js | ![stripe-elements](documentation_assets/testing/stripe-elements.png) | <mark>Pass<mark> | Two undefined variables |
 | countryfield.js | ![countryfield](documentation_assets/testing/countryfield.png) | <mark>Pass<mark> | One undefined variables |
 
+
 ### Python
+
+
 
 
 |File|App|Validator|Result|Comments|
@@ -110,11 +121,14 @@ go back to [README.md](/README.md)
 | views.py | urban_glam_wear |![urban-glam-wear-views](documentation_assets/testing/ugw-views.png) | <mark>Pass<mark> | |
 | apps.py | Wishlist |![wishlist-apps](documentation_assets/testing/wishlist-apps.png) | <mark>Pass<mark> | |
 | urls.py | Wishlist |![wishlist-urls](documentation_assets/testing/wishlist-urls.png) | <mark>Pass<mark> | |
-| views.py | Wisklist |![wishlist-views](documentation_assets/testing/wishlist-views.png) | <mark>Pass<mark> | 
+| views.py | Wisklist |![wishlist-views](documentation_assets/testing/wishlist-views.png) | <mark>Pass<mark> |
+
 
 [Go to the top](#testing)
 
+
 ## Accesibility
+
 
 |PAge|Lighthouse Report|
 | --- | --- |
@@ -135,89 +149,105 @@ go back to [README.md](/README.md)
 | Privacy Policy | ![privacy-policy-lhr](documentation_assets/lighthouse/privacy-policy-lhr.png)|
 | 404 | ![404-lhr](documentation_assets/lighthouse/404-lhr.png)|
 
+
 [Go to the top](#testing)
+
 
 ## Tools Testing
 
+
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 
-Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+Chrome DevTools was used during the development process to test, explore, and modify HTML elements and CSS styles used in the project.
+
 
 [Go to the top](#testing)
 
+
 ## Manual Testing
+
 
 ### Browser Compatibility
 
+
 Browser | Outcome | Pass/Fail |
 --- | --- | --- |
-Google Chrome | No appearance, responsiveness nor functionality issues.| <mark>Pass<mark> 
-Safari | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> 
-Mozilla Firefox | No responsiveness nor functionality issues.| <mark>Pass<mark> 
-Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> 
+Google Chrome | No appearance, responsiveness nor functionality issues.| <mark>Pass<mark>
+Safari | No appearance, responsiveness, or functionality issues. | <mark>Pass<mark>
+Mozilla Firefox | No responsiveness nor functionality issues.| <mark>Pass<mark>
+Microsoft Edge | No appearance, responsiveness or functionality issues. | <mark>Pass<mark>
+
 
 ### Navbar Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 | Navbar | Click on the logo | Redirects to Home | Pass | The mobile version has a Home link in the dropdown menu |
-|  | Click on the categorires links in navbar | Open the dropdown menus  | Pass |   |
+|  | Click on the categories links in navbar | Open the dropdown menus  | Pass |   |
 |  | Click the links inside the dropdown menus | Redirects to correct page | Pass |  |
 |  | Click on My Account icon | Open the dropdown menu | Pass |  |
-|  | Click on the links in My account dropdown menu | Redirect to correct page | Pass |  |
+|  | Click on the links in My Account dropdown menu | Redirect to correct page | Pass |  |
 |  | Click on Bag icon | Redirect to Shopping bag page  | Pass |  |
 | Search bar | Type keywords | Return correct results | Pass |  |
+
 
 ### Home Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 | Home | Click on Go Shopping button | Redirects to products page | Pass |  |
-| Newsletter | Type a valid email and click on subscribe button | Show a succes message  | Pass | when typing a not valid email the user receive feedback messages showing what is wrong with the email entered 
+| Newsletter | Type a valid email and click on the subscribe button | Show a success message  | Pass | When typing a not valid email the user receives feedback messages showing what is wrong with the email entered
 | Footer | Click on Contact Us button | Redirects to correct page | Pass |  |
 |  | Click on About Us link | Redirects to correct page | Pass |  |
 |  | Click on Privacy Policy link | Redirects to correct page | Pass |  |
 |  | Click on Social Media icons | Redirects to the correct page | Pass |  |
 
+
 ### Product Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 | Product page | Use the Sorting menu | Reorder the product list | Pass |  |
-| Product card | Clck on Details button | Redirects to Product details page | Pass |  |
-|  | Click on Add to wishlist button | Shows a success message | Pass | It also change the Add to wishlist button text to Remove from Wishlist in the product card |
+| Product card | Click on Details button | Redirects to Product details page | Pass |  |
+|  | Click on Add to Wishlist button | Shows a success message | Pass | It also changes the Add to Wishlist button text to Remove from Wishlist in the product card |
 |  | Click on Remove from wishlist button | Shows a success message | Pass | IT also change the Remove from wishlist button text to Add to wishlist button |
+
 
 ### Product Details Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 | Product Details card | use the dropdown menu for size selection | Change the actual selection | Pass |  |
-|  | Use the Quantity up/down arrows to add/rest units | Change the quantity number adding/removing one when clicked | Pass |  |
-|  | Type a correct number in Quantity input area | Change the quantity number | Pass | When typing something different from a number the user receive feedback messages to enter a correct number. It also has a top quantity of 99 units |
-|  | Click on Add to wishlist button | Shows a success message | Pass | It also change the Add to wishlist button text to Remove from Wishlist in the product card |
+|  | Use the Quantity up/down arrows to add/rest units | Change the quantity number by adding/removing one when clicked | Pass |  |
+|  | Type a correct number in the Quantity input area | Change the quantity number | Pass | When typing something different from a number the user receives feedback messages to enter a correct number. It also has a top quantity of 99 units |
+|  | Click on Add to Wishlist button | Shows a success message | Pass | It also changes the Add to Wishlist button text to Remove from Wishlist in the product card |
 |  | Click on Remove from wishlist button | Shows a success message | Pass | IT also change the Remove from wishlist button text to Add to wishlist button |
-|  | Click on Add to bag button | Shows a Succes message with your bag content and a button to go to Secure Checkout | Pass | The button in the Success message is redirecting correctly to Checkout page |
+|  | Click on the Add to Bag button | Shows a Succes message with your bag content and a button to go to Secure Checkout | Pass | The button in the Success message is redirecting correctly to the Checkout page |
 |  | Click on Keep Shopping button | Redirects to Products page | Pass |  |
-| Only for Admin Users | Click on Edit button | Redirects to Product management Edit page with all the product data displayed on the form. | Pass | It also shows an Alert message to the admin that said "You are editing Yoga set |
+| Only for Admin Users | Click on Edit button | Redirects to Product Management Edit page with all the product data displayed on the form. | Pass | It also shows an Alert message to the admin that says "You are editing Yoga set |
 |  | Click on Delete button | Show a modal Asking the admin for deletion confirmation | Pass | The App shows an abnormal behavior when clicking yes in the modal showing a message with the text undefined. But the product is deleted properly and no other issues are detected |
+
 
 ### Bag Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-| Product info | Click on Quantity add/remove arrows | Add/remove 1 from acutal number | Pass | input a number works as well and still has a limit of 99 products |
+| Product info | Click on Quantity add/remove arrows | Add/remove 1 from actual number | Pass | Input a number works as well and still has a limit of 99 products |
 |  | Click on Update after changing the quantity number | Change the quantity number and update the subtotal | Pass |  |
 |  | Click on Remove | Remove the product from the bag | Pass |  |
 |  | Click on Keep Shopping button | Redirects the user to Products page | Pass |  |
 |  | Click on Secure Checkout button | Redirects the user to Checkout page | Pass |  |
+
 
 ### Checkout Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 | Checkout form | Input incorrect data to form | Shows feedback messages to the user to fix the problem  | Pass |  |
 |  | Click on Adjust Bag button | Redirects the user to Checkout page | Pass |  |
-|  | Click on complete order button | Redirects the user to Checkout Success page | Pass | It also shows a success message informing the user that the order was processed and an email will be sent to the users email |
+|  | Click on the complete order button | Redirects the user to the Checkout Success page | Pass | It also shows a success message informing the user that the order was processed and an email will be sent to the user's email |
+
 
 ### Checkout Success Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |  | Click on Have a look button | Redirects user to Products page filtered by New arrivals category | Pass |  |
+
 
 ### Contact Us Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
@@ -225,44 +255,54 @@ Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark
 | Contact us form |  Input incorrect data to form | Shows feedback messages to the user to fix the problem | Pass |  |
 |  | click on Submit button | Shows a success message  | Pass |  |
 
+
 ### About Us Testing
 
+
 No interactive elements to test
+
 
 ### Privacy Policy Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |  | Click on links in privacy policy page | Redirects to the correct page | Pass |  |
 
+
 ### 404 Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |  | Click on Return to main page button | Redirects to the correct page | Pass |  |
 
+
 ### Register page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-| Registration form | Input incorrect data | Shows feedback messages to let the user knows about the incorrect data | Pass |  |
-|  | Click on Sign up button | Redirects the user to confirm-email page and shows an alert informing the user that an email has been sent to the email provided | Pass |  |
+| Registration form | Input incorrect data | Shows feedback messages to let the user know about the incorrect data | Pass |  |
+|  | Click on the Signup button | Redirects the user to the confirm-email page and shows an alert informing the user that an email has been sent to the email provided | Pass |  |
 ### Login Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-|  | Click on Sign in button | Redirects the user ro Home page and shows a success message  | Pass |  |
+|  | Click on the Sign in button | Redirects the user to Home page and shows a success message  | Pass |  |
 ### Logout Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |  | Click on Sign out button | Redirects to Home page and shows a success message | Pass |  |
+
 
 ### Product Management Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 | Add Product Form | Input incorrect data in form | Shows feedback messages to correct the issues | Pass |  |
 |  | Click on Cancel button | Redirects the user to products page | Pass |  |
-|  | Click on Add Product button | Redirects the user to product details page and shows a success message | Pass |  |
+|  | Click on the Add Product button | Redirects the user to the product details page and shows a success message | Pass |  |
 ### Wishlist Page Testing
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
 |  | Click on Product Page button | Redirects to correct page | Pass |  |
 |  | Click on left and right arrow buttons | Move to next wishlist product in the carousel | Pass |  |
 
+
 [Go to the top](#testing)
+
+
+
