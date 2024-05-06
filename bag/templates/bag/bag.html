@@ -62,7 +62,8 @@
                                                     <input class="form-control qty_input" type="number"
                                                         name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                         data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
+                                                        id="id_qty_{{ item.item_id }}" 
+                                                        oninput="this.value = Math.min(this.value, 99)">
                                                     {% if item.product.has_sizes %}
                                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                                     {% endif%}

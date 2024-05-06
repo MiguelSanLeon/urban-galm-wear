@@ -11,8 +11,7 @@ go back to [README.md](/README.md)
 - [Manual Testing](#manual-testing)
     - [Browser Compatibility](#browser-compatibility)
     - [Navbar Testing](#navbar-testing)
-    - [Footer Testing](#footer-testing)
-    - [Search Bar Testing](#search-bar-testing)
+    - [Home Page Testing](#home-page-testing)
     - [Product Page Testing](#product-page-testing)
     - [Product Detail Page Testing](#product-detail-page-testing)
     - [Bag Testing](#bag-testing)
@@ -143,9 +142,50 @@ Chrome DevTools was used during the development process to test, explore and mod
 
 Browser | Outcome | Pass/Fail |
 --- | --- | --- |
-Google Chrome | No appearance, responsiveness nor functionality issues.| <mark>Pass<mark> |
-Safari | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> |
-Mozilla Firefox | No responsiveness nor functionality issues.| <mark>Pass<mark> |
-Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> |
+Google Chrome | No appearance, responsiveness nor functionality issues.| <mark>Pass<mark> 
+Safari | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> 
+Mozilla Firefox | No responsiveness nor functionality issues.| <mark>Pass<mark> 
+Microsoft Edge | No appearance, responsiveness nor functionality issues. | <mark>Pass<mark> 
 
+### Navbar Testing
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+| Navbar | Click on the logo | Redirect to Home | Pass | The mobile version has a Home link in the dropdown menu |
+|  | Click on the categorires links in navbar | Open the dropdown menus  | Pass |   |
+|  | Click the links inside the dropdown menus | Redirect to correct page | Pass |  |
+|  | Click on My Account icon | Open the dropdown menu | Pass |  |
+|  | Click on the links in My account dropdown menu | Redirect to correct page | Pass |  |
+|  | Click on Bag icon | Redirect to Shopping bag page  | Pass |  |
+| Search bar | Type keywords | Return correct results | Pass |  |
 
+### Home Page Testing
+| Home | Click on Go Shopping button | Redirect to products page | Pass |  |
+| Newsletter | Type a valid email and click on subscribe button | Show a succes message  | Pass | when typing a not valid email the user receive feedback messages showing what is wrong with the email entered 
+| Footer | Click on Contact Us button | Redirect to correct page | Pass |  |
+|  | Click on About Us link | Redirect to correct page | Pass |  |
+|  | Click on Privacy Policy link | Redirect to correct page | Pass |  |
+|  | Click on Social Media icons | Redirect to the correct page | Pass |  |
+
+### Product Page Testing
+| Product page | Use the Sorting menu | Reorder the product list | Pass |  |
+| Product card | Clck on Details button | Redirect to Product details page | Pass |  |
+|  | Click on Add to wishlist button | Shows a success message | Pass | It also change the Add to wishlist button text to Remove from Wishlist in the product card |
+|  | Click on Remove from wishlist button | Shows a success message | Pass | IT also change the Remove from wishlist button text to Add to wishlist button |
+
+### Product Details Page
+| Product Details card | use the dropdown menu for size selection | change the actual selection | Pass |  |
+|  | Use the Quantity up/down arrows to add/rest units | Change the quantity number adding/removing one when clicked | Pass |  |
+|  | Type a correct number in Quantity input area | change the quantity number | Pass | When typing something different from a number the user receive feedback messages to enter a correct number. It also has a top quantity of 99 units |
+|  | Click on Add to wishlist button | Shows a success message | Pass | It also change the Add to wishlist button text to Remove from Wishlist in the product card |
+|  | Click on Remove from wishlist button | Shows a success message | Pass | IT also change the Remove from wishlist button text to Add to wishlist button |
+|  | Click on Add to bag button | Shows a Succes message with your bag content and a button to go to Secure Checkout | Pass | The button in the Success message is redirecting correctly to Checkout page |
+|  | Click on Keep Shopping button | Redirect to Products page | Pass |  |
+| Only for Admin Users | Click on Edit button | Redirect to Product management Edit page with all the product data displayed on the form. | Pass | It also shows an Alert message to the admin that said "You are editing Yoga set |
+|  | Click on Delete button | Show a modal Asking the admin for deletion confirmation | Pass | The App shows an abnormal behavior when clicking yes in the modal showing a message with the text undefined. But the product is deleted properly and no other issues are detected |
+
+### Bag Testing
+| Product info | Click on Quantity add/remove arrows | Add/remove 1 from acutal number | Pass | input a number works as well and  |
+|  | Click on Update after  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
